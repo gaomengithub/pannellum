@@ -1,84 +1,50 @@
 <template>
-    <van-button @click="switchScene">zhongguoliliang</van-button>
     <div id="panorama"></div>
-    <slot name="memu"></slot>
+    <Memu @eventFromChild="switchScene" />
 </template>
 
 <script setup>
-import { onMounted } from 'vue';
+import { onMounted , watch } from 'vue';
+import imageUrls from "../global"
+import Memu from './Memu.vue';
 let viewer
 onMounted(() => {
     viewer = pannellum.viewer("panorama", {
         "default": {
-            "firstScene": "firstScene",
-            "author": "Matthew Petroff",
+            "firstScene": "厂区全景",
+            // "author": "Matthew Petroff",
             "sceneFadeDuration": 1000
         },
-        "scenes": {
-            "firstScene": {
-                type: 'equirectangular',
-                panorama: '/images/红粮车间和稻壳车间.jpg',
-                autoLoad: true,
-                showControls: true,
-                haov: "360",
-                // autoRotate:"-5",
-                // autoRotateInactivityDelay:"5",
-                // hotSpots: [
-                //     {
-                //         pitch: 14.1,
-                //         yaw: -11.4,
-                //         type: 'scene',
-                //         text: '鸟瞰全景',
-                //         sceneId: '鸟瞰全景',
-                //     },
-                //     {
-                //         pitch: -10.8,
-                //         yaw: 222.6,
-                //         type: 'scene',
-                //         text: '第二个场景',
-                //         sceneId: 'scene3',
-                //     },
-                // ],
-
-            },
-            "secondScene": {
-                type: 'equirectangular',
-                panorama: "http://rxb4dwevt.hb-bkt.clouddn.com/%E5%89%8D%E8%A8%80.jpg",
-                autoLoad: true,
-                showControls: true,
-                haov: "360",
-                // autoRotate:"-5",
-                // autoRotateInactivityDelay:"5",
-                // hotSpots: [
-                //     {
-                //         pitch: 14.1,
-                //         yaw: -11.4,
-                //         type: 'scene',
-                //         text: '鸟瞰全景',
-                //         sceneId: '鸟瞰全景',
-                //     },
-                //     {
-                //         pitch: -10.8,
-                //         yaw: 222.6,
-                //         type: 'scene',
-                //         text: '第二个场景',
-                //         sceneId: 'scene3',
-                //     },
-                // ],
-
-            }
-
-        }
-
-
+        "scenes": makeSceneInfo()
     })
-    // viewer.loadScene("firstScence")
 })
 
-function switchScene() {
-    console.log(viewer.getContainer())
-        viewer.loadScene("secondScene")
+function switchScene(sceneId) {
+    viewer.loadScene(sceneId)
 }
+
+defineExpose({ switchScene })
+
+function makeSceneInfo() {
+    let scenes = {}
+    for (let key in imageUrls) {
+        for (let subKey in imageUrls[key]) {
+            scenes[subKey] = {
+                type: 'equirectangular',
+                panorama: imageUrls[key][subKey].split('.com/')[0] + '.com/' + '8192/' + imageUrls[key][subKey].split('.com/')[1],
+                preview:imageUrls[key][subKey].split('.com/')[0] + '.com/' + 'cover/' + imageUrls[key][subKey].split('.com/')[1],
+                autoLoad: true,
+                showControls: true,
+                haov: "360",
+                hfov:60,
+                minHfov:30,
+            }
+        }
+    }
+    return scenes
+}
+
+
 </script>
 <style>
 #panorama {
