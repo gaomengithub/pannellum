@@ -14,9 +14,11 @@
     "panolens": "^0.12.1",
     "vant": "^4.6.1",
     "vue": "^3.3.4",
-    "vue-pannellum": "^0.5.3"
+    "vue-pannellum": "^0.5.3",
+    "vuetify": "^3.3.7"
   },
   "devDependencies": {
+    "@mdi/font": "^7.2.96",
     "@rushstack/eslint-patch": "^1.2.0",
     "@vitejs/plugin-vue": "^4.2.3",
     "@vue/eslint-config-prettier": "^7.1.0",

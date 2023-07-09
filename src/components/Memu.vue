@@ -1,31 +1,47 @@
 <template>
+    <div class="right-nav">
+        <v-btn  variant="text" icon="mdi-music-circle" color="grey-lighten-5"></v-btn>
+    </div>
     <div class="bar">
-        <div class="memu">
-            <van-button v-for="(value, key) in imageUrls" :key="key" type="primary" @click="switchThumbNav(key)"
-                :class="{ active: activeKey === key }">{{ key }}</van-button>
+        <v-sheet class="mx-auto">
+            <v-slide-group show-arrows>
+                <v-slide-group-item v-for="(_, key) in imageUrls" :key="key">
+                    <v-btn class="ma-2" density="comfortable" rounded :color="navTitle === key ? 'primary' : undefined" @click="thumbNav(key)">
+                        {{ key }}
+                    </v-btn>
+                </v-slide-group-item>
+            </v-slide-group>
+        </v-sheet>
+        <div class="img-nav">
+            <v-slide-group  style="width: 100%;" show-arrows>
+                <v-slide-group-item v-for="(item, idx) in thumbUrls[thumbUrlsNav]" >
+                    <div class="cell" :style="{backgroundImage: `url(${item})` }" @click="callSwitchScene(item)" :class="{ active: thumbUrl === item }" >
+                        <!-- <img :src="item" :class="{ active: thumbUrl === item }" @click="callSwitchScene(item)" /> -->
+                        <div style="background-color: black; opacity: 0.8;" >
+                            <div class="scroll-text" :class="{ scroll: thumbUrl === item }" >{{ item.replace(/thumb\/|.jpg/g, '') }}</div>
+                        </div>
+                    </div>
+                </v-slide-group-item>
+            </v-slide-group>
         </div>
-        <div class="child">
-            <img class="child-img" v-for="(item, idx) in thumbUrls[thumbUrlsNav]" :src="item"
-                :class="{ imageActive: activeImageKey === item }" @click="callSwitchScene(item)" />
-        </div>
-        <!-- 在这里添加菜单栏的内容 -->
     </div>
 </template>
 
 <script setup>
-import { onMounted, ref, getCurrentInstance } from 'vue';
-const activeKey = ref("鸟瞰航拍")
-const activeImageKey = ref("thumb/厂区全景.jpg")
+import { ref } from 'vue';
+const navTitle = ref("鸟瞰航拍")
+const thumbUrl = ref("thumb/厂区全景.jpg")
 
-function switchThumbNav(key) {
+function thumbNav(key) {
     thumbUrlsNav.value = key
-    activeKey.value = key;
+    navTitle.value = key;
 }
-let emit = getCurrentInstance().emit
+
+const emits = defineEmits(['eventFromChild'])
 let callSwitchScene = (item) => {
-    activeImageKey.value = item
-    let res = item.replace(/thumb\/|.jpg/g,'')
-    emit('eventFromChild', res);
+    thumbUrl.value = item
+    let res = item.replace(/thumb\/|.jpg/g, '')
+    emits('eventFromChild', res);
 }
 
 
@@ -37,6 +53,7 @@ const thumbUrls = {
         "thumb/厂区全景.jpg",
         "thumb/露天金属酒库.jpg",
         "thumb/金属酒库.jpg",
+        "thumb/红粮车间和稻壳车间.jpg",
         "thumb/制曲厂区1.jpg",
         "thumb/制曲厂区2.jpg",
     ], "办公楼": [
@@ -88,74 +105,102 @@ const thumbUrls = {
     display: flex;
     flex-direction: column;
     position: fixed;
-    bottom: 1vh;
+    bottom: 5vh;
     width: 80vw;
-    height: 20vh;
-    opacity: 0.8;
+    min-height: 18vh;
     left: 50%;
     right: 50%;
     transform: translateX(-50%);
-    /* overflow: hidden; */
-}
-
-.bar .memu {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    height: 5vh;
-    overflow: auto;
-}
-
-
-
-.bar .child {
-    display: flex;
-    background-color: #000000;
-    height: 8vh;
-    border-radius: 10px;
-    padding: 8px;
-    flex-direction: row;
-    overflow: auto;
-}
-
-.van-button {
-    max-height: 3vh;
-    height: 4vh !important;
-    min-width: 20vw;
-    border-radius: 10px;
-    border-color: #000000;
-    white-space: nowrap;
-    margin-right: 10px;
-    font-size: 0.75rem !important;
-    font-weight: 300 !important;
-    background-color: #000000;
-    opacity: 0.8;
-    /* 不换行 */
     overflow: hidden;
-    /* 超出部分隐藏 */
-    text-overflow: ellipsis;
-    /* 超出部分显示省略号 */
 }
 
-.child-img {
-    width: 16vw;
-    /* max-width: 16vw; */
-    margin-right: 5vw;
-    border-radius: 15px;
-    border-width: 2px;
+.right-nav {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 2vw;
+    right: 2vw;
+}
+
+.mx-auto {
+    background: none;
+    max-width: 80vw;
+}
+
+.v-btn--icon.v-btn--size-default {
+    --v-btn-size: 1.5rem;
+}
+
+:deep(.v-slide-group__prev) {
+    min-width: 1vw !important;
+}
+
+:deep(.v-slide-group__next) {
+    min-width: 1vw !important;
+}
+
+.bar .img-nav {
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    background-color: #000000;
+    border-radius: 10px;
+    opacity: 0.85;
+    height: 12vh;
+    padding: 8px;
+    overflow: auto;
+    overflow-y: hidden;
+}
+
+.bar .img-nav .cell {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    margin-right: 2vw;
+    margin-left: 2vw;
+    overflow: hidden;
+    width: 8vh;
+    height: 8vh;
+    background-size: contain;
+    border-radius: 10px;
+    border-width: 3px;
     border-style: solid;
-    border-color: #fff
+    border-color: #fff;
+
+}
+
+.scroll-text {
+    position: relative;
+    bottom: 0;
+    width: 8vh;
+    font-size: 0.75em;
+    color: #fff;
+    text-align: center;
+    /* overflow: hidden; */
+    white-space: nowrap;
+    padding-right: 2px;
+    padding-left: 2px;
+
+}
+
+.scroll {
+    animation: scroll 5s linear infinite;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
 }
 
 .active {
-    background-color: #5085FB;
-    border-color: #5085FB;
-}
-
-.imageActive {
-    border-color: #5085FB;
-    /* border-width: 2px;
-    border-style: solid; */
+    border-color: #5085FB !important;
+    z-index: 1;
 }
 </style>
 
