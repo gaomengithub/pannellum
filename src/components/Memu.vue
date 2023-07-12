@@ -1,24 +1,28 @@
 <template>
     <div class="right-nav">
-        <v-btn  variant="text" icon="mdi-music-circle" color="grey-lighten-5"></v-btn>
+        <v-btn variant="text" :icon="isPlaying ? 'mdi-music' : 'mdi-music-off'" color="grey-lighten-5" density="compact"
+            size="auto" @click="playController"></v-btn>
     </div>
     <div class="bar">
         <v-sheet class="mx-auto">
             <v-slide-group show-arrows>
-                <v-slide-group-item v-for="(_, key) in imageUrls" :key="key">
-                    <v-btn class="ma-2" density="comfortable" rounded :color="navTitle === key ? 'primary' : undefined" @click="thumbNav(key)">
-                        {{ key }}
+                <v-slide-group-item v-for="item in navTitle" :key="item">
+                    <v-btn class="ma-2" density="comfortable" rounded :color="navCurrTitle === item ? 'primary' : undefined"
+                        @click="titleNav(item)">
+                        {{ item }}
                     </v-btn>
                 </v-slide-group-item>
             </v-slide-group>
         </v-sheet>
         <div class="img-nav">
-            <v-slide-group  style="width: 100%;" show-arrows>
-                <v-slide-group-item v-for="(item, idx) in thumbUrls[thumbUrlsNav]" >
-                    <div class="cell" :style="{backgroundImage: `url(${item})` }" @click="callSwitchScene(item)" :class="{ active: thumbUrl === item }" >
+            <v-slide-group style="width: 100%;" show-arrows>
+                <v-slide-group-item v-for="(item, idx) in store.thumbUrls[navCurrTitle]">
+                    <div class="cell" :style="{ backgroundImage: `url(${item})` }" @click="callSwitchScene(item)"
+                        :class="{ active: thumbUrl === item }">
                         <!-- <img :src="item" :class="{ active: thumbUrl === item }" @click="callSwitchScene(item)" /> -->
-                        <div style="background-color: black; opacity: 0.8;" >
-                            <div class="scroll-text" :class="{ scroll: thumbUrl === item }" >{{ item.replace(/thumb\/|.jpg/g, '') }}</div>
+                        <div style="background-color: black; opacity: 0.8;">
+                            <div class="scroll-text" :class="{ scroll: thumbUrl === item }">{{ item.replace(/thumb\/|.jpg/g,
+                                '') }}</div>
                         </div>
                     </div>
                 </v-slide-group-item>
@@ -29,75 +33,39 @@
 
 <script setup>
 import { ref } from 'vue';
-const navTitle = ref("鸟瞰航拍")
-const thumbUrl = ref("thumb/厂区全景.jpg")
+import music from '/music/背景音乐.mp3'
+import { storeToRefs } from 'pinia'
+import { useCounterStore } from "../store/index"
+const store = useCounterStore()
+const { thumbUrl, navCurrTitle } = storeToRefs(store)
 
-function thumbNav(key) {
-    thumbUrlsNav.value = key
-    navTitle.value = key;
+const navTitle = ["鸟瞰航拍", "办公楼", "文化馆", "制曲室", "制酒车间", "自动化制酒车间", "酒海", "包装车间", "酒窖"]
+// const navCurrTitle = ref("鸟瞰航拍")
+// const thumbUrl = ref("thumb/厂区全景.jpg")
+
+
+function titleNav(key) {
+    navCurrTitle.value = key;
 }
 
 const emits = defineEmits(['eventFromChild'])
 let callSwitchScene = (item) => {
-    thumbUrl.value = item
-    let res = item.replace(/thumb\/|.jpg/g, '')
-    emits('eventFromChild', res);
+    emits('eventFromChild', item);
+}
+
+const isPlaying = ref(false)
+const audio = new Audio(music);
+
+function playController() {
+    isPlaying.value = !isPlaying.value
+    if (isPlaying.value) {
+        audio.play()
+    } else {
+        audio.pause()
+    }
 }
 
 
-
-import imageUrls from "../global"
-const thumbUrlsNav = ref("鸟瞰航拍")
-const thumbUrls = {
-    "鸟瞰航拍": [
-        "thumb/厂区全景.jpg",
-        "thumb/露天金属酒库.jpg",
-        "thumb/金属酒库.jpg",
-        "thumb/红粮车间和稻壳车间.jpg",
-        "thumb/制曲厂区1.jpg",
-        "thumb/制曲厂区2.jpg",
-    ], "办公楼": [
-        "thumb/厂区大门.jpg",
-        "thumb/办公楼大厅.jpg",
-
-    ], "文化馆": [
-        "thumb/前言.jpg",
-        "thumb/简介.jpg",
-        "thumb/19985工艺1.jpg",
-        "thumb/19985工艺2.jpg",
-        "thumb/古法酿造工具.jpg",
-        "thumb/书法区.jpg",
-        "thumb/弧形投影.jpg",
-        "thumb/党建.jpg",
-    ], "制曲室": [
-        "thumb/培菌室.jpg",
-    ], "制酒车间": [
-        "thumb/制酒车间1.jpg",
-        "thumb/制酒车间2.jpg",
-        "thumb/制酒车间3.jpg",
-        "thumb/制酒车间4.jpg",
-    ], "自动化制酒车间": [
-        "thumb/自动化制酒车间1.jpg",
-        "thumb/自动化制酒车间2.jpg",
-        "thumb/自动化制酒车间3.jpg",
-        "thumb/自动化制酒车间4.jpg",
-        "thumb/自动化制酒车间5.jpg",
-        "thumb/自动化制酒车间6.jpg",
-        "thumb/自动化制酒车间7.jpg",
-        "thumb/自动化制酒车间8.jpg",
-    ], "酒海": [
-        "thumb/酒海1.jpg",
-        "thumb/酒海2.jpg",
-        "thumb/酒海3.jpg",
-        "thumb/酒海4.jpg",
-        "thumb/酒海5.jpg",
-    ], "包装车间": [
-        "thumb/包装车间.jpg",
-        "thumb/仓库.jpg",
-    ], "酒窖": [
-        "thumb/酒窖.jpg",
-    ]
-}
 
 </script>
 <style scoped>
@@ -121,6 +89,8 @@ const thumbUrls = {
     top: 2vw;
     right: 2vw;
 }
+
+
 
 .mx-auto {
     background: none;
@@ -204,3 +174,4 @@ const thumbUrls = {
 }
 </style>
 
+../scene
