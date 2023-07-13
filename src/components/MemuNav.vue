@@ -5,7 +5,7 @@
     </div>
     <div class="bar">
         <v-sheet class="mx-auto">
-            <v-slide-group show-arrows>
+            <v-slide-group show-arrows next-icon="mdi-arrow-right-circle" prev-icon="mdi-arrow-left-circle">
                 <v-slide-group-item v-for="item in navTitle" :key="item">
                     <v-btn class="ma-2" density="comfortable" rounded :color="navCurrTitle === item ? 'primary' : undefined"
                         @click="titleNav(item)">
@@ -16,15 +16,19 @@
         </v-sheet>
         <div class="img-nav">
             <v-slide-group style="width: 100%;" show-arrows>
-                <v-slide-group-item v-for="(item, idx) in store.thumbUrls[navCurrTitle]">
+                <v-slide-group-item v-for="(item, idx) in store.thumbUrls[navCurrTitle]" :key="idx">
                     <div class="cell" :style="{ backgroundImage: `url(${item})` }" @click="callSwitchScene(item)"
                         :class="{ active: thumbUrl === item }">
+                        <v-icon class="over" icon="mdi-check-circle-outline" :style="{opacity: used.includes(item)? 1 :0}" />
                         <!-- <img :src="item" :class="{ active: thumbUrl === item }" @click="callSwitchScene(item)" /> -->
                         <div style="background-color: black; opacity: 0.8;">
                             <div class="scroll-text" :class="{ scroll: thumbUrl === item }">{{ item.replace(/thumb\/|.jpg/g,
                                 '') }}</div>
+
                         </div>
+
                     </div>
+
                 </v-slide-group-item>
             </v-slide-group>
         </div>
@@ -37,9 +41,10 @@ import music from '/music/背景音乐.mp3'
 import { storeToRefs } from 'pinia'
 import { useCounterStore } from "../store/index"
 const store = useCounterStore()
-const { thumbUrl, navCurrTitle } = storeToRefs(store)
+const { thumbUrl, navCurrTitle ,used }= storeToRefs(store)
 
 const navTitle = ["鸟瞰航拍", "办公楼", "文化馆", "制曲室", "制酒车间", "自动化制酒车间", "酒海", "包装车间", "酒窖"]
+
 // const navCurrTitle = ref("鸟瞰航拍")
 // const thumbUrl = ref("thumb/厂区全景.jpg")
 
@@ -50,11 +55,13 @@ function titleNav(key) {
 
 const emits = defineEmits(['eventFromChild'])
 let callSwitchScene = (item) => {
+    used.value.push(item)
     emits('eventFromChild', item);
 }
 
 const isPlaying = ref(false)
 const audio = new Audio(music);
+audio.loop= true
 
 function playController() {
     isPlaying.value = !isPlaying.value
@@ -113,9 +120,9 @@ function playController() {
     flex-direction: row;
     display: flex;
     align-items: center;
-    background-color: #000000;
+    background-color: rgb(0,0,0,0.85);
     border-radius: 10px;
-    opacity: 0.85;
+    /* opacity: 0.85; */
     height: 12vh;
     padding: 8px;
     overflow: auto;
@@ -125,7 +132,7 @@ function playController() {
 .bar .img-nav .cell {
     display: flex;
     flex-direction: column;
-    justify-content: end;
+    justify-content: space-between;
     align-items: center;
     margin-right: 2vw;
     margin-left: 2vw;
@@ -138,6 +145,14 @@ function playController() {
     border-style: solid;
     border-color: #fff;
 
+}
+
+.over {
+    position: relative;
+    left: 25%;
+    filter: invert(1);
+    color: #000000 !important;
+    opacity: 0;
 }
 
 .scroll-text {
@@ -172,6 +187,6 @@ function playController() {
     border-color: #5085FB !important;
     z-index: 1;
 }
-</style>
 
-../scene
+
+</style>

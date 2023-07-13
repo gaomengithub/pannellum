@@ -1,4 +1,5 @@
 <template>
+    <TipCard />
     <div id="panorama"></div>
     <Memu @eventFromChild="switchScene" />
     <Information />
@@ -6,15 +7,18 @@
 
 <script setup>
 import { onMounted } from 'vue';
-import Memu from './Memu.vue';
-import Information from './Information.vue';
+import Memu from './MemuNav.vue';
+import Information from './InformationCard.vue';
 import { storeToRefs } from 'pinia'
 import { useCounterStore } from "../store/index"
+import TipCard from './TipCard.vue';
+// import * as pannellum from 'pannellum';
 const store = useCounterStore()
-const { overlay , thumbUrl ,navCurrTitle} = storeToRefs(store)
+const { overlay, thumbUrl, navCurrTitle ,used } = storeToRefs(store)
 
 let viewer
 onMounted(() => {
+    // eslint-disable-next-line no-undef
     viewer = pannellum.viewer("panorama", {
         "default": {
             "firstScene": "厂区全景",
@@ -40,7 +44,9 @@ onMounted(() => {
                         "type": "scene",
                         "text": "办公楼",
                         "sceneId": "办公楼前",
-                        "div": {}
+                        "cssClass": "scenePoint",
+                        "createTooltipFunc": scenespot,
+                        "createTooltipArgs": "办公楼前",
                     },
                     {
                         "pitch": -22,
@@ -48,7 +54,10 @@ onMounted(() => {
                         "type": "scene",
                         "text": "文化馆",
                         "sceneId": "前言",
-                        "div": {}
+                        "cssClass": "scenePoint",
+                        "createTooltipFunc": scenespot,
+                        "createTooltipArgs": "前言",
+
                     },
                     {
                         "pitch": -10,
@@ -56,7 +65,10 @@ onMounted(() => {
                         "type": "scene",
                         "text": "金属酒库",
                         "sceneId": "金属酒库",
-                        "div": {}
+                        "cssClass": "scenePoint",
+                        "createTooltipFunc": scenespot,
+                        "createTooltipArgs": "金属酒库",
+
                     },
                     {
                         "pitch": -6,
@@ -64,7 +76,21 @@ onMounted(() => {
                         "type": "scene",
                         "text": "红粮车间和稻壳车间",
                         "sceneId": "红粮车间和稻壳车间",
-                        "div": {}
+                        "cssClass": "scenePoint",
+                        "createTooltipFunc": scenespot,
+                        "createTooltipArgs": "红粮车间和稻壳车间",
+
+                    },
+                    {
+                        "pitch": -2,
+                        "yaw": -68,
+                        "type": "scene",
+                        "text": "制曲厂区1",
+                        "sceneId": "制曲厂区1",
+                        "cssClass": "scenePoint",
+                        "createTooltipFunc": scenespot,
+                        "createTooltipArgs": "制曲厂区",
+
                     },
                     {
                         "pitch": -7,
@@ -72,7 +98,10 @@ onMounted(() => {
                         "type": "scene",
                         "text": "露天金属酒库",
                         "sceneId": "露天金属酒库",
-                        "div": {}
+                        "cssClass": "scenePoint",
+                        "createTooltipFunc": scenespot,
+                        "createTooltipArgs": "露天金属酒库",
+
                     },
                     {
                         "pitch": -17,
@@ -80,7 +109,10 @@ onMounted(() => {
                         "type": "scene",
                         "text": "自动化制酒车间",
                         "sceneId": "自动化制酒车间1",
-                        "div": {}
+                        "cssClass": "scenePoint",
+                        "createTooltipFunc": scenespot,
+                        "createTooltipArgs": "自动化制酒车间",
+
                     }
                 ]
             },
@@ -101,14 +133,21 @@ onMounted(() => {
                         "yaw": 158,
                         "type": "scene",
                         "text": "红粮车间和稻壳车间",
-                        "sceneId": "红粮车间和稻壳车间"
+                        "sceneId": "红粮车间和稻壳车间",
+                        "cssClass": "scenePoint",
+                        "createTooltipFunc": scenespot,
+                        "createTooltipArgs": "红粮车间和稻壳车间",
+
                     },
                     {
                         "pitch": -3,
                         "yaw": 75,
                         "type": "scene",
                         "text": "厂区全景",
-                        "sceneId": "厂区全景"
+                        "sceneId": "厂区全景",
+                        "cssClass": "scenePoint",
+                        "createTooltipFunc": scenespot,
+                        "createTooltipArgs": "厂区全景",
                     }
                 ]
             },
@@ -129,14 +168,20 @@ onMounted(() => {
                         "yaw": -98,
                         "type": "scene",
                         "text": "露天金属酒库",
-                        "sceneId": "露天金属酒库"
+                        "sceneId": "露天金属酒库",
+                        "cssClass": "scenePoint",
+                        "createTooltipFunc": scenespot,
+                        "createTooltipArgs": "露天金属酒库",
                     },
                     {
                         "pitch": -3,
                         "yaw": -38,
                         "type": "scene",
                         "text": "厂区全景",
-                        "sceneId": "厂区全景"
+                        "sceneId": "厂区全景",
+                        "cssClass": "scenePoint",
+                        "createTooltipFunc": scenespot,
+                        "createTooltipArgs": "厂区全景",
                     }
                 ]
             },
@@ -162,7 +207,29 @@ onMounted(() => {
                 "hfov": 60,
                 "minHfov": 20,
                 "yaw": -112,
-                "pitch": -40
+                "pitch": -40,
+                "hotSpots": [
+                    {
+                        "pitch": -18,
+                        "yaw": -90,
+                        "type": "scene",
+                        "text": "制曲厂区2",
+                        "sceneId": "制曲厂区2",
+                        "cssClass": "scenePoint",
+                        "createTooltipFunc": scenespot,
+                        "createTooltipArgs": "制曲厂区2",
+                    },
+                    {
+                        "pitch": 0,
+                        "yaw": 115,
+                        "type": "scene",
+                        "text": "厂区全景",
+                        "sceneId": "厂区全景",
+                        "cssClass": "scenePoint",
+                        "createTooltipFunc": scenespot,
+                        "createTooltipArgs": "厂区全景",
+                    }
+                ]
             },
             "制曲厂区2": {
                 "type": "equirectangular",
@@ -174,7 +241,29 @@ onMounted(() => {
                 "hfov": 60,
                 "minHfov": 20,
                 "yaw": -53,
-                "pitch": -40
+                "pitch": -40,
+                "hotSpots": [
+                    {
+                        "pitch": -20,
+                        "yaw": -135,
+                        "type": "scene",
+                        "text": "制曲厂区1",
+                        "sceneId": "制曲厂区1",
+                        "cssClass": "scenePoint",
+                        "createTooltipFunc": scenespot,
+                        "createTooltipArgs": "制曲厂区1",
+                    },
+                    {
+                        "pitch": 0,
+                        "yaw": 200,
+                        "type": "scene",
+                        "text": "厂区全景",
+                        "sceneId": "厂区全景",
+                        "cssClass": "scenePoint",
+                        "createTooltipFunc": scenespot,
+                        "createTooltipArgs": "厂区全景",
+                    }
+                ]
             },
             "厂区大门": {
                 "type": "equirectangular",
@@ -193,7 +282,10 @@ onMounted(() => {
                         "yaw": 4,
                         "type": "scene",
                         "text": "办公楼前",
-                        "sceneId": "办公楼前"
+                        "sceneId": "办公楼前",
+                        "cssClass": "scenePoint",
+                        "createTooltipFunc": scenespot,
+                        "createTooltipArgs": "办公楼前",
                     }
                 ]
             },
@@ -214,7 +306,10 @@ onMounted(() => {
                         "yaw": 0,
                         "type": "scene",
                         "text": "办公楼大厅",
-                        "sceneId": "办公楼大厅"
+                        "sceneId": "办公楼大厅",
+                        "cssClass": "scenePoint",
+                        "createTooltipFunc": scenespot,
+                        "createTooltipArgs": "办公楼大厅",
                     }
                 ]
             },
@@ -228,7 +323,19 @@ onMounted(() => {
                 "hfov": 60,
                 "minHfov": 20,
                 "yaw": 0,
-                "pitch": 0
+                "pitch": 0,
+                "hotSpots": [
+                    {
+                        "pitch": 2,
+                        "yaw": 58,
+                        "type": "scene",
+                        "text": "文化馆",
+                        "sceneId": "古法酿造工具",
+                        "cssClass": "scenePoint",
+                        "createTooltipFunc": scenespot,
+                        "createTooltipArgs": "文化馆",
+                    }
+                ]
             },
             "前言": {
                 "type": "equirectangular",
@@ -247,7 +354,10 @@ onMounted(() => {
                         "yaw": 120,
                         "type": "scene",
                         "text": "简介",
-                        "sceneId": "简介"
+                        "sceneId": "简介",
+                        "cssClass": "scenePoint",
+                        "createTooltipFunc": scenespot,
+                        "createTooltipArgs": "简介",
                     }
                 ]
             },
@@ -268,14 +378,20 @@ onMounted(() => {
                         "yaw": 185,
                         "type": "scene",
                         "text": "19985工艺1",
-                        "sceneId": "19985工艺1"
+                        "sceneId": "19985工艺1",
+                        "cssClass": "scenePoint",
+                        "createTooltipFunc": scenespot,
+                        "createTooltipArgs": "19985工艺1",
                     },
                     {
                         "pitch": -25,
                         "yaw": -140,
                         "type": "scene",
                         "text": "历史脉络",
-                        "sceneId": "历史脉络"
+                        "sceneId": "历史脉络",
+                        "cssClass": "scenePoint",
+                        "createTooltipFunc": scenespot,
+                        "createTooltipArgs": "历史脉络",
                     }
                 ]
             },
@@ -289,7 +405,19 @@ onMounted(() => {
                 "hfov": 60,
                 "minHfov": 20,
                 "yaw": 0,
-                "pitch": 0
+                "pitch": 0,
+                "hotSpots": [
+                    {
+                        "pitch": -15,
+                        "yaw": 145,
+                        "type": "scene",
+                        "text": "简介",
+                        "sceneId": "简介",
+                        "cssClass": "scenePoint",
+                        "createTooltipFunc": scenespot,
+                        "createTooltipArgs": "简介",
+                    }
+                ]
             },
             "19985工艺1": {
                 "type": "equirectangular",
@@ -308,7 +436,10 @@ onMounted(() => {
                         "yaw": -20,
                         "type": "scene",
                         "text": "古法酿造工具",
-                        "sceneId": "古法酿造工具"
+                        "sceneId": "古法酿造工具",
+                        "cssClass": "scenePoint",
+                        "createTooltipFunc": scenespot,
+                        "createTooltipArgs": "古法酿造工具",
                     }
                 ]
             },
@@ -322,7 +453,19 @@ onMounted(() => {
                 "hfov": 60,
                 "minHfov": 20,
                 "yaw": 0,
-                "pitch": 0
+                "pitch": 0,
+                "hotSpots": [
+                    {
+                        "pitch": -15,
+                        "yaw": 145,
+                        "type": "scene",
+                        "text": "历史脉络",
+                        "sceneId": "历史脉络",
+                        "cssClass": "scenePoint",
+                        "createTooltipFunc": scenespot,
+                        "createTooltipArgs": "历史脉络",
+                    }
+                ]
             },
             "19985工艺3": {
                 "type": "equirectangular",
@@ -353,7 +496,20 @@ onMounted(() => {
                         "yaw": -110,
                         "type": "scene",
                         "text": "酒海",
-                        "sceneId": "酒海"
+                        "sceneId": "酒海",
+                        "cssClass": "scenePoint",
+                        "createTooltipFunc": scenespot,
+                        "createTooltipArgs": "酒海",
+                    },
+                    {
+                        "pitch": -15,
+                        "yaw": 70,
+                        "type": "scene",
+                        "text": "19985工艺2",
+                        "sceneId": "19985工艺2",
+                        "cssClass": "scenePoint",
+                        "createTooltipFunc": scenespot,
+                        "createTooltipArgs": "19985工艺2",
                     }
                 ]
             },
@@ -374,7 +530,10 @@ onMounted(() => {
                         "yaw": -65,
                         "type": "scene",
                         "text": "企业产品",
-                        "sceneId": "企业产品"
+                        "sceneId": "企业产品",
+                        "cssClass": "scenePoint",
+                        "createTooltipFunc": scenespot,
+                        "createTooltipArgs": "企业产品",
                     }
                 ]
             },
@@ -407,7 +566,10 @@ onMounted(() => {
                         "yaw": 180,
                         "type": "scene",
                         "text": "前景展望",
-                        "sceneId": "前景展望"
+                        "sceneId": "前景展望",
+                        "cssClass": "scenePoint",
+                        "createTooltipFunc": scenespot,
+                        "createTooltipArgs": "前景展望",
                     }
                 ]
             },
@@ -485,7 +647,10 @@ onMounted(() => {
                         "yaw": 0,
                         "type": "scene",
                         "text": "制酒车间2",
-                        "sceneId": "制酒车间2"
+                        "sceneId": "制酒车间2",
+                        "cssClass": "scenePoint",
+                        "createTooltipFunc": scenespot,
+                        "createTooltipArgs": "制酒车间2",
                     }
                 ]
             },
@@ -719,24 +884,25 @@ onMounted(() => {
             }
         }
     })
-    viewer.on("scenechange",function(){
+    viewer.on("scenechange", function () {
         navCurrTitle.value = findCategory("thumb/" + viewer.getScene() + ".jpg")
-        thumbUrl.value =  "thumb/" + viewer.getScene() + ".jpg"
+        thumbUrl.value = "thumb/" + viewer.getScene() + ".jpg"
+        used.value.push(thumbUrl.value)
 
     })
 })
 
 function findCategory(val) {
-  // 遍历thumbUrls的键
-  for (let category of Object.keys(store.thumbUrls)) {
-    // 在当前分类的图片中查找是否有匹配的URL
-    if (store.thumbUrls[category].find((value) => value === val)) {
-      // 如果找到了匹配的URL，返回当前的分类
-      return category;
+    // 遍历thumbUrls的键
+    for (let category of Object.keys(store.thumbUrls)) {
+        // 在当前分类的图片中查找是否有匹配的URL
+        if (store.thumbUrls[category].find((value) => value === val)) {
+            // 如果找到了匹配的URL，返回当前的分类
+            return category;
+        }
     }
-  }
-  // 如果没有找到匹配的URL，返回null
-  return null;
+    // 如果没有找到匹配的URL，返回null
+    return null;
 }
 
 
@@ -755,6 +921,12 @@ function hotspot(hotSpotDiv, args) {
 }
 
 
+function scenespot(hotSpotDiv, args) {
+    const span = document.createElement('span');
+    span.innerHTML = args;
+    hotSpotDiv.appendChild(span);
+}
+
 
 defineExpose({ switchScene })
 
@@ -772,13 +944,42 @@ defineExpose({ switchScene })
 .custom-hotspot {
     height: 40px;
     width: 40px;
-    background-image: url("/icon/information-slab-circle-outline.svg");
-    background-repeat: no-repeat;
+    background-image: url("../assets/icons/information-slab-circle-outline.svg");
+
     /* 防止图标重复 */
     background-size: contain;
     /* 让图标在盒子里面适当的缩放 */
     filter: invert(1);
     /* Applies the invert filter */
 }
+
+.scenePoint {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    background-image: url(../assets/icons/point.gif);
+    background-size: cover;
+}
+
+
+.scenePoint span {
+    position: relative;
+    bottom: 20px;
+    display: block;
+    padding: 5px;
+    width: fit-content;
+    text-align: center;
+    font-size: 0.8em;
+    color: aliceblue;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 5px;
+    white-space: nowrap;
+
+}
+
+
+
 </style>
 
