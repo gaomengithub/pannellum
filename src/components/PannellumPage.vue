@@ -56,7 +56,7 @@ onMounted(() => {
                         "sceneId": "前言",
                         "cssClass": "scenePoint",
                         "createTooltipFunc": scenespot,
-                        "createTooltipArgs": "前言",
+                        "createTooltipArgs": "文化馆",
 
                     },
                     {
@@ -344,7 +344,7 @@ onMounted(() => {
                 "autoLoad": true,
                 "showControls": true,
                 "haov": "360",
-                "hfov": 60,
+                "hfov": 70,
                 "minHfov": 20,
                 "yaw": 0,
                 "pitch": 0,
@@ -409,13 +409,23 @@ onMounted(() => {
                 "hotSpots": [
                     {
                         "pitch": -15,
-                        "yaw": 145,
+                        "yaw": 125,
                         "type": "scene",
                         "text": "简介",
                         "sceneId": "简介",
                         "cssClass": "scenePoint",
                         "createTooltipFunc": scenespot,
                         "createTooltipArgs": "简介",
+                    },
+                    {
+                        "pitch": -15,
+                        "yaw": -80,
+                        "type": "scene",
+                        "text": "19985工艺1",
+                        "sceneId": "19985工艺1",
+                        "cssClass": "scenePoint",
+                        "createTooltipFunc": scenespot,
+                        "createTooltipArgs": "19985工艺1",
                     }
                 ]
             },
@@ -570,6 +580,16 @@ onMounted(() => {
                         "cssClass": "scenePoint",
                         "createTooltipFunc": scenespot,
                         "createTooltipArgs": "前景展望",
+                    },
+                    {
+                        "pitch": -13,
+                        "yaw": 108,
+                        "type": "scene",
+                        "text": "弧形投影",
+                        "sceneId": "弧形投影",
+                        "cssClass": "scenePoint",
+                        "createTooltipFunc": scenespot,
+                        "createTooltipArgs": "弧形投影",
                     }
                 ]
             },
@@ -583,7 +603,19 @@ onMounted(() => {
                 "hfov": 60,
                 "minHfov": 20,
                 "yaw": 0,
-                "pitch": 0
+                "pitch": 0,
+                "hotSpots": [
+                    {
+                        "pitch": -10,
+                        "yaw": -90,
+                        "type": "scene",
+                        "text": "弧形投影",
+                        "sceneId": "弧形投影",
+                        "cssClass": "scenePoint",
+                        "createTooltipFunc": scenespot,
+                        "createTooltipArgs": "弧形投影",
+                    }
+                ]
             },
             "弧形投影": {
                 "type": "equirectangular",
@@ -595,7 +627,19 @@ onMounted(() => {
                 "hfov": 60,
                 "minHfov": 20,
                 "yaw": 0,
-                "pitch": 0
+                "pitch": 0,
+                "hotSpots": [
+                    {
+                        "pitch": -10,
+                        "yaw": -82,
+                        "type": "scene",
+                        "text": "党建",
+                        "sceneId": "党建",
+                        "cssClass": "scenePoint",
+                        "createTooltipFunc": scenespot,
+                        "createTooltipArgs": "党建",
+                    }
+                ]
             },
             "党建": {
                 "type": "equirectangular",
@@ -606,8 +650,20 @@ onMounted(() => {
                 "haov": "360",
                 "hfov": 60,
                 "minHfov": 20,
-                "yaw": 0,
-                "pitch": 0
+                "yaw": -18,
+                "pitch": 0,
+                "hotSpots": [
+                    {
+                        "pitch": -13,
+                        "yaw":-110,
+                        "type": "scene",
+                        "text": "制酒车间",
+                        "sceneId": "制酒车间1",
+                        "cssClass": "scenePoint",
+                        "createTooltipFunc": scenespot,
+                        "createTooltipArgs": "制酒车间",
+                    }
+                ]
             },
             "培菌室": {
                 "type": "equirectangular",
@@ -643,7 +699,7 @@ onMounted(() => {
                 "pitch": 0,
                 "hotSpots": [
                     {
-                        "pitch": 0,
+                        "pitch": -8,
                         "yaw": 0,
                         "type": "scene",
                         "text": "制酒车间2",
@@ -663,8 +719,40 @@ onMounted(() => {
                 "haov": "360",
                 "hfov": 60,
                 "minHfov": 20,
-                "yaw": 0,
-                "pitch": 0
+                "yaw": 90,
+                "pitch": 0,
+                "hotSpots": [
+                    {
+                        "pitch": 0,
+                        "yaw":169,
+                        "type": "scene",
+                        "text": "制酒车间3",
+                        "sceneId": "制酒车间3",
+                        "cssClass": "scenePoint",
+                        "createTooltipFunc": scenespot,
+                        "createTooltipArgs": "制酒车间3",
+                    },
+                    {
+                        "pitch": 0,
+                        "yaw":5,
+                        "type": "scene",
+                        "text": "制酒车间4",
+                        "sceneId": "制酒车间4",
+                        "cssClass": "scenePoint",
+                        "createTooltipFunc": scenespot,
+                        "createTooltipArgs": "制酒车间4",
+                    },
+                    {
+                        "pitch": -8,
+                        "yaw":-83,
+                        "type": "scene",
+                        "text": "自动化制酒车间1",
+                        "sceneId": "自动化制酒车间1",
+                        "cssClass": "scenePoint",
+                        "createTooltipFunc": scenespot,
+                        "createTooltipArgs": "自动化制酒车间",
+                    }
+                ]
             },
             "制酒车间3": {
                 "type": "equirectangular",
@@ -676,7 +764,29 @@ onMounted(() => {
                 "hfov": 60,
                 "minHfov": 20,
                 "yaw": 0,
-                "pitch": 0
+                "pitch": 0,
+                "hotSpots": [
+                    {
+                        "pitch": 0,
+                        "yaw":-8,
+                        "type": "scene",
+                        "text": "制酒车间4",
+                        "sceneId": "制酒车间4",
+                        "cssClass": "scenePoint",
+                        "createTooltipFunc": scenespot,
+                        "createTooltipArgs": "制酒车间4",
+                    },
+                    {
+                        "pitch": -5,
+                        "yaw":-25,
+                        "type": "scene",
+                        "text": "制酒车间2",
+                        "sceneId": "制酒车间2",
+                        "cssClass": "scenePoint",
+                        "createTooltipFunc": scenespot,
+                        "createTooltipArgs": "制酒车间2",
+                    }
+                ]
             },
             "制酒车间4": {
                 "type": "equirectangular",
@@ -688,7 +798,29 @@ onMounted(() => {
                 "hfov": 60,
                 "minHfov": 20,
                 "yaw": 0,
-                "pitch": 0
+                "pitch": 0,
+                "hotSpots": [
+                    {
+                        "pitch": -3,
+                        "yaw":-8,
+                        "type": "scene",
+                        "text": "制酒车间3",
+                        "sceneId": "制酒车间3",
+                        "cssClass": "scenePoint",
+                        "createTooltipFunc": scenespot,
+                        "createTooltipArgs": "制酒车间3",
+                    },
+                    {
+                        "pitch": -5,
+                        "yaw":-18,
+                        "type": "scene",
+                        "text": "制酒车间2",
+                        "sceneId": "制酒车间2",
+                        "cssClass": "scenePoint",
+                        "createTooltipFunc": scenespot,
+                        "createTooltipArgs": "制酒车间2",
+                    }
+                ]
             },
             "自动化制酒车间1": {
                 "type": "equirectangular",
@@ -700,7 +832,19 @@ onMounted(() => {
                 "hfov": 60,
                 "minHfov": 20,
                 "yaw": 0,
-                "pitch": 0
+                "pitch": 0,
+                "hotSpots": [
+                    {
+                        "pitch": -6,
+                        "yaw":24,
+                        "type": "scene",
+                        "text": "自动化制酒车间2",
+                        "sceneId": "自动化制酒车间2",
+                        "cssClass": "scenePoint",
+                        "createTooltipFunc": scenespot,
+                        "createTooltipArgs": "自动化制酒车间2",
+                    },
+                ]
             },
             "自动化制酒车间2": {
                 "type": "equirectangular",
@@ -711,8 +855,20 @@ onMounted(() => {
                 "haov": "360",
                 "hfov": 60,
                 "minHfov": 20,
-                "yaw": 0,
-                "pitch": 0
+                "yaw": 15,
+                "pitch": 0,
+                "hotSpots": [
+                    {
+                        "pitch": 8,
+                        "yaw":115,
+                        "type": "scene",
+                        "text": "自动化制酒车间3",
+                        "sceneId": "自动化制酒车间3",
+                        "cssClass": "scenePoint",
+                        "createTooltipFunc": scenespot,
+                        "createTooltipArgs": "自动化制酒车间3",
+                    },
+                ]
             },
             "自动化制酒车间3": {
                 "type": "equirectangular",
@@ -723,20 +879,44 @@ onMounted(() => {
                 "haov": "360",
                 "hfov": 60,
                 "minHfov": 20,
-                "yaw": 0,
-                "pitch": 0
+                "yaw": -170,
+                "pitch": 0,
+                "hotSpots": [
+                    {
+                        "pitch": 4,
+                        "yaw":-55,
+                        "type": "scene",
+                        "text": "自动化制酒车间4",
+                        "sceneId": "自动化制酒车间4",
+                        "cssClass": "scenePoint",
+                        "createTooltipFunc": scenespot,
+                        "createTooltipArgs": "自动化制酒车间4",
+                    },
+                ]
             },
             "自动化制酒车间4": {
                 "type": "equirectangular",
-                "panorama": "http://rxb4dwevt.hb-bkt.clouddn.com/8192/%E8%87%AA%E5%8A%A8%E5%8C%96%E5%88%B6%E9%85%92%E8%BD%A6%E9%97%B44.jpg",
-                "preview": "http://rxb4dwevt.hb-bkt.clouddn.com/cover/%E8%87%AA%E5%8A%A8%E5%8C%96%E5%88%B6%E9%85%92%E8%BD%A6%E9%97%B44.jpg",
+                "panorama": "http://rxb4dwevt.hb-bkt.clouddn.com/8192/%E8%87%AA%E5%8A%A8%E5%8C%96%E5%88%B6%E9%85%92%E8%BD%A6%E9%97%B46.jpg",
+                "preview": "http://rxb4dwevt.hb-bkt.clouddn.com/cover/%E8%87%AA%E5%8A%A8%E5%8C%96%E5%88%B6%E9%85%92%E8%BD%A6%E9%97%B46.jpg",
                 "autoLoad": true,
                 "showControls": true,
                 "haov": "360",
                 "hfov": 60,
                 "minHfov": 20,
                 "yaw": 0,
-                "pitch": 0
+                "pitch": 0,
+                "hotSpots": [
+                    {
+                        "pitch": -4,
+                        "yaw":180,
+                        "type": "scene",
+                        "text": "自动化制酒车间5",
+                        "sceneId": "自动化制酒车间5",
+                        "cssClass": "scenePoint",
+                        "createTooltipFunc": scenespot,
+                        "createTooltipArgs": "自动化制酒车间5",
+                    },
+                ]
             },
             "自动化制酒车间5": {
                 "type": "equirectangular",
@@ -748,19 +928,43 @@ onMounted(() => {
                 "hfov": 60,
                 "minHfov": 20,
                 "yaw": 0,
-                "pitch": 0
+                "pitch": 0,
+                "hotSpots": [
+                    {
+                        "pitch": -4,
+                        "yaw":90,
+                        "type": "scene",
+                        "text": "自动化制酒车间6",
+                        "sceneId": "自动化制酒车间6",
+                        "cssClass": "scenePoint",
+                        "createTooltipFunc": scenespot,
+                        "createTooltipArgs": "自动化制酒车间6",
+                    },
+                ]
             },
             "自动化制酒车间6": {
                 "type": "equirectangular",
-                "panorama": "http://rxb4dwevt.hb-bkt.clouddn.com/8192/%E8%87%AA%E5%8A%A8%E5%8C%96%E5%88%B6%E9%85%92%E8%BD%A6%E9%97%B46.jpg",
-                "preview": "http://rxb4dwevt.hb-bkt.clouddn.com/cover/%E8%87%AA%E5%8A%A8%E5%8C%96%E5%88%B6%E9%85%92%E8%BD%A6%E9%97%B46.jpg",
+                "panorama": "http://rxb4dwevt.hb-bkt.clouddn.com/8192/%E8%87%AA%E5%8A%A8%E5%8C%96%E5%88%B6%E9%85%92%E8%BD%A6%E9%97%B44.jpg",
+                "preview": "http://rxb4dwevt.hb-bkt.clouddn.com/cover/%E8%87%AA%E5%8A%A8%E5%8C%96%E5%88%B6%E9%85%92%E8%BD%A6%E9%97%B44.jpg",
                 "autoLoad": true,
                 "showControls": true,
                 "haov": "360",
                 "hfov": 60,
                 "minHfov": 20,
                 "yaw": 0,
-                "pitch": 0
+                "pitch": 0,
+                "hotSpots": [
+                    {
+                        "pitch": 8,
+                        "yaw":-3,
+                        "type": "scene",
+                        "text": "自动化制酒车间7",
+                        "sceneId": "自动化制酒车间7",
+                        "cssClass": "scenePoint",
+                        "createTooltipFunc": scenespot,
+                        "createTooltipArgs": "自动化制酒车间7",
+                    },
+                ]
             },
             "自动化制酒车间7": {
                 "type": "equirectangular",
@@ -772,7 +976,19 @@ onMounted(() => {
                 "hfov": 60,
                 "minHfov": 20,
                 "yaw": 0,
-                "pitch": 0
+                "pitch": 0,
+                "hotSpots": [
+                    {
+                        "pitch": 8,
+                        "yaw":90,
+                        "type": "scene",
+                        "text": "自动化制酒车间8",
+                        "sceneId": "自动化制酒车间8",
+                        "cssClass": "scenePoint",
+                        "createTooltipFunc": scenespot,
+                        "createTooltipArgs": "自动化制酒车间8",
+                    },
+                ]
             },
             "自动化制酒车间8": {
                 "type": "equirectangular",
@@ -784,7 +1000,19 @@ onMounted(() => {
                 "hfov": 60,
                 "minHfov": 20,
                 "yaw": 0,
-                "pitch": 0
+                "pitch": 0,
+                "hotSpots": [
+                    {
+                        "pitch": 0,
+                        "yaw":180,
+                        "type": "scene",
+                        "text": "酒海1",
+                        "sceneId": "酒海1",
+                        "cssClass": "scenePoint",
+                        "createTooltipFunc": scenespot,
+                        "createTooltipArgs": "酒海",
+                    },
+                ]
             },
             "酒海1": {
                 "type": "equirectangular",
@@ -796,7 +1024,20 @@ onMounted(() => {
                 "hfov": 60,
                 "minHfov": 20,
                 "yaw": 0,
-                "pitch": 0
+                "pitch": 0,
+                "hotSpots": [
+                    {
+                        "pitch": -10,
+                        "yaw":0,
+                        "type": "scene",
+                        "text": "酒海2",
+                        "sceneId": "酒海2",
+                        "cssClass": "scenePoint",
+                        "createTooltipFunc": scenespot,
+                        "createTooltipArgs": "酒海2",
+                    },
+                ]
+                
             },
             "酒海2": {
                 "type": "equirectangular",
@@ -808,7 +1049,20 @@ onMounted(() => {
                 "hfov": 60,
                 "minHfov": 20,
                 "yaw": 0,
-                "pitch": 0
+                "pitch": 0,
+                "hotSpots": [
+                    {
+                        "pitch": -10,
+                        "yaw":0,
+                        "type": "scene",
+                        "text": "酒海3",
+                        "sceneId": "酒海3",
+                        "cssClass": "scenePoint",
+                        "createTooltipFunc": scenespot,
+                        "createTooltipArgs": "酒海3",
+                    },
+                ]
+                
             },
             "酒海3": {
                 "type": "equirectangular",
@@ -820,7 +1074,19 @@ onMounted(() => {
                 "hfov": 60,
                 "minHfov": 20,
                 "yaw": 0,
-                "pitch": 0
+                "pitch": 0,
+                "hotSpots": [
+                    {
+                        "pitch": -2,
+                        "yaw":0,
+                        "type": "scene",
+                        "text": "酒海4",
+                        "sceneId": "酒海4",
+                        "cssClass": "scenePoint",
+                        "createTooltipFunc": scenespot,
+                        "createTooltipArgs": "酒海4",
+                    },
+                ]
             },
             "酒海4": {
                 "type": "equirectangular",
@@ -832,7 +1098,19 @@ onMounted(() => {
                 "hfov": 60,
                 "minHfov": 20,
                 "yaw": 0,
-                "pitch": 0
+                "pitch": 0,
+                "hotSpots": [
+                    {
+                        "pitch": -2,
+                        "yaw":0,
+                        "type": "scene",
+                        "text": "酒海5",
+                        "sceneId": "酒海5",
+                        "cssClass": "scenePoint",
+                        "createTooltipFunc": scenespot,
+                        "createTooltipArgs": "酒海5",
+                    },
+                ]
             },
             "酒海5": {
                 "type": "equirectangular",
@@ -844,7 +1122,19 @@ onMounted(() => {
                 "hfov": 60,
                 "minHfov": 20,
                 "yaw": 0,
-                "pitch": 0
+                "pitch": 0,
+                "hotSpots": [
+                    {
+                        "pitch": -2,
+                        "yaw":-84,
+                        "type": "scene",
+                        "text": "包装车间",
+                        "sceneId": "包装车间",
+                        "cssClass": "scenePoint",
+                        "createTooltipFunc": scenespot,
+                        "createTooltipArgs": "包装车间",
+                    },
+                ]
             },
             "包装车间": {
                 "type": "equirectangular",
@@ -855,8 +1145,20 @@ onMounted(() => {
                 "haov": "360",
                 "hfov": 60,
                 "minHfov": 20,
-                "yaw": 0,
-                "pitch": 0
+                "yaw": -115,
+                "pitch": 0,
+                "hotSpots": [
+                    {
+                        "pitch": -2,
+                        "yaw":-69,
+                        "type": "scene",
+                        "text": "仓库",
+                        "sceneId": "仓库",
+                        "cssClass": "scenePoint",
+                        "createTooltipFunc": scenespot,
+                        "createTooltipArgs": "仓库",
+                    },
+                ]
             },
             "仓库": {
                 "type": "equirectangular",
@@ -867,8 +1169,20 @@ onMounted(() => {
                 "haov": "360",
                 "hfov": 60,
                 "minHfov": 20,
-                "yaw": 0,
-                "pitch": 0
+                "yaw": 90,
+                "pitch": 0,
+                "hotSpots": [
+                    {
+                        "pitch": -2,
+                        "yaw":87,
+                        "type": "scene",
+                        "text": "酒窖",
+                        "sceneId": "酒窖",
+                        "cssClass": "scenePoint",
+                        "createTooltipFunc": scenespot,
+                        "createTooltipArgs": "酒窖",
+                    },
+                ]
             },
             "酒窖": {
                 "type": "equirectangular",
@@ -880,7 +1194,20 @@ onMounted(() => {
                 "hfov": 60,
                 "minHfov": 20,
                 "yaw": 0,
-                "pitch": 0
+                "pitch": 0,
+                "hotSpots": [
+                    {
+                        "pitch": 2,
+                        "yaw":0,
+                        "type": "info",
+                        "text": "凤香酒馆",
+                        "URL":"https://www.baidu.com/"
+                        // "sceneId": "酒窖",
+                        // "cssClass": "scenePoint",
+                        // "createTooltipFunc": scenespot,
+                        // "createTooltipArgs": "酒窖",
+                    },
+                ]
             }
         }
     })

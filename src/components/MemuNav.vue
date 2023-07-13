@@ -109,11 +109,11 @@ function playController() {
 }
 
 :deep(.v-slide-group__prev) {
-    min-width: 1vw !important;
+    min-width: 25px !important;
 }
 
 :deep(.v-slide-group__next) {
-    min-width: 1vw !important;
+    min-width: 25px !important;
 }
 
 .bar .img-nav {
@@ -123,7 +123,7 @@ function playController() {
     background-color: rgb(0,0,0,0.85);
     border-radius: 10px;
     /* opacity: 0.85; */
-    height: 12vh;
+    height: 15vh;
     padding: 8px;
     overflow: auto;
     overflow-y: hidden;
@@ -137,8 +137,9 @@ function playController() {
     margin-right: 2vw;
     margin-left: 2vw;
     overflow: hidden;
-    width: 8vh;
-    height: 8vh;
+    width: 10vh;
+    aspect-ratio: 1 / 1 ;
+    /* height: 8vh; */
     background-size: contain;
     border-radius: 10px;
     border-width: 3px;
@@ -158,8 +159,8 @@ function playController() {
 .scroll-text {
     position: relative;
     bottom: 0;
-    width: 8vh;
-    font-size: 0.75em;
+    width: 10vh;
+    font-size: 0.85em;
     color: #fff;
     text-align: center;
     /* overflow: hidden; */

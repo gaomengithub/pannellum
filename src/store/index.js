@@ -21,14 +21,17 @@ export const useCounterStore = defineStore('main', () => {
         "文化馆": [
             "thumb/前言.jpg",
             "thumb/简介.jpg",
+            "thumb/历史脉络.jpg",
             "thumb/19985工艺1.jpg",
             "thumb/19985工艺2.jpg",
             "thumb/古法酿造工具.jpg",
+            "thumb/酒海.jpg",
+            "thumb/前景展望.jpg",
             "thumb/书法区.jpg",
+            "thumb/企业产品.jpg",
             "thumb/弧形投影.jpg",
             "thumb/党建.jpg",
-            "thumb/酒海.jpg",
-            "thumb/历史脉络.jpg",
+
         ],
         "制曲室": [
             "thumb/培菌室.jpg",
