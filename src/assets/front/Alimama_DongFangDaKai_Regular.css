@@ -1,0 +1,14 @@
+@font-face {
+    font-family: "Alimama_DongFangDaKai_Regular";
+    src: url("Alimama_DongFangDaKai_Regular.eot"); /* IE9 */
+    src: url("Alimama_DongFangDaKai_Regular.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    
+    url("Alimama_DongFangDaKai_Regular.woff") format("woff"), /* chrome、firefox */
+    url("Alimama_DongFangDaKai_Regular.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+ */
+    
+    url("Alimama_DongFangDaKai_Regular.svg#Alimama_DongFangDaKai_Regular") format("svg"); /* iOS 4.1- */
+    font-style: normal;
+    font-weight: normal;
+}
+
+

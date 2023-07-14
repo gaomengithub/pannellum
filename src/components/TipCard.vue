@@ -1,10 +1,10 @@
 <template>
     <v-overlay v-model="show" location-strategy="connected" scroll-strategy="block">
         <v-card-text>
-            <!-- <v-img class="tip" :width="300" src="/tip/intipsPC.gif" v-if="type == 'PC'">
+            <v-img class="tip" :width="300" src="/tip/intipsPC.gif" v-if="type == 'PC'">
             </v-img>
             <v-img class="tip" :width="300" src="/tip/intipsAPP.gif" v-if="type == 'Mobile device'">
-            </v-img> -->
+            </v-img>
         </v-card-text>
     </v-overlay>
 </template>

@@ -12,6 +12,7 @@ import Pannellum from './components/PannellumPage.vue';
 
 <style>
 @import './assets/front/AlimamaDaoLiTi-Regular.css';
+@import './assets/front/Alimama_DongFangDaKai_Regular.css';
 #app {
   width: 100vw;
   height: 100vh;

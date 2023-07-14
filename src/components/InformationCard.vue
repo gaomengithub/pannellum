@@ -1,10 +1,10 @@
 <template>
     <div class="header-bar">
-        <v-card>
-            <v-card-text class="title scroll-text">
+        <v-card v-show="thumbUrl=='thumb/厂区全景.jpg'">
+            <v-card-text class="title scroll-text" >
                 凤香酒核心产区——陕西凤翔·柳林镇
             </v-card-text>
-            <v-card-text class="title">
+            <v-card-text class="title" v-bind:style="{ fontFamily: fontFamily }">
                 柳林酒业集团
             </v-card-text>
         </v-card>
@@ -30,9 +30,21 @@
 <script setup >
 import { storeToRefs } from 'pinia'
 import { useCounterStore } from "../store/index"
+// import { ref } from 'vue';
 
 const store = useCounterStore()
-const { overlay } = storeToRefs(store)
+const { overlay ,thumbUrl } = storeToRefs(store)
+
+// const fontFamily = ref("AlimamaDaoLiTi-Regular")
+// function switchFront() {
+//     if (fontFamily.value == "AlimamaDaoLiTi-Regular") {
+//         fontFamily.value = "Alimama_DongFangDaKai_Regular"
+
+//     } else {
+//         fontFamily.value = "AlimamaDaoLiTi-Regular"
+//     }
+// }
+
 </script>
 
 <style scoped>
@@ -59,12 +71,14 @@ const { overlay } = storeToRefs(store)
     width: 100vw;
     transform: translateX(-50%);
     background: none;
-    
+
 }
 
 .v-card {
     background: none;
     width: 80vw;
+    box-shadow: none;
+    
 }
 
 .pic {
@@ -78,7 +92,7 @@ const { overlay } = storeToRefs(store)
 .title {
     font-size: 2em !important;
     text-align: center;
-    font-family: 'AlimamaDaoLiTi-Regular';
+    font-family: 'Alimama_DongFangDaKai_Regular';
     color: aliceblue;
     white-space: nowrap;
 }
