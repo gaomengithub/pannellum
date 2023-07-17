@@ -8,4 +8,4 @@ RUN npm run build
 FROM caddy:2.3.0-alpine
 
 COPY Caddyfile /etc/caddy/Caddyfile
-COPY --from=builder /build /srv
+COPY --from=builder /dist /srv
