@@ -1260,7 +1260,7 @@ onMounted(() => {
                         "yaw":0,
                         "type": "info",
                         "text": "凤享酒馆",
-                        "URL":"https://www.baidu.com/"
+                        "URL":"https://www.fenghuanian.com/"
                         // "sceneId": "酒窖",
                         // "cssClass": "scenePoint",
                         // "createTooltipFunc": scenespot,
@@ -1362,7 +1362,6 @@ defineExpose({ switchScene })
     background-color: rgba(0, 0, 0, 0.7);
     border-radius: 5px;
     white-space: nowrap;
-
 }
 
 
