@@ -20,7 +20,7 @@ jobs:
         run: docker login -u francissmajere@qq.com -p $PASS registry.cn-hongkong.aliyuncs.com
       - run: docker build -t registry.cn-hongkong.aliyuncs.com/infiniteprimes/jiu-pan:0.0.1 .
       - run: docker push registry.cn-hongkong.aliyuncs.com/infiniteprimes/jiu-pan:0.0.1
-      # - run: curl https://cs.console.aliyun.com/hook/trigger?token=eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjbHVzdGVySWQiOiJjOGU1MzFkYTgyNDZjNGVhN2E1Y2U1MGM2ODkzZmFmMGYiLCJpZCI6IjE0MDEzMiJ9.nmsDBUxl-ZfIjpYx9aXjh9mvwyiXehGqJaQLNC3w3JQgWXnZUctgE1S4lkJuWqd2Ebf3Pgl2Xd0cBqKlr9HiqOkTiuDjK30_tFfDo3Fz6TMv0gLjIFARSLP-jXfas3c6_OxKj4OefOO0J_O_ErEP1JmkiT9B6Svd9gaq8bzE7wQ
+      - run: curl https://cs.console.aliyun.com/hook/trigger?token=eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjbHVzdGVySWQiOiJjOTMwZmQyMDAyMDE3NDMxODk2MTRiMGQ2YzJkZWY2N2QiLCJpZCI6IjIyNjkwMyJ9.pNtb3ERCjbBV0Vgo-3-lzyBzi6-5DniayzXLW0CRp-fLhtAv6ktZt-jWQCH6TNfJe_gemOQfDYvWD0Zp2D_5D7PuFwQQwnAfRA8OIW8HlphhItkcluJFm3_3hIFLbeW5ou4Dbnrvm05NCeB68LW6WR8uh7bFhvplj-6r4RPGGvY
 
       # - uses: act10ns/slack@v1
       #   with:
