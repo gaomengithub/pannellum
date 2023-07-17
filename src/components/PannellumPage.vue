@@ -25,7 +25,7 @@ onMounted(() => {
         "scenes": {
             "厂区全景": {
                 "type": "equirectangular",
-                "panorama": prefix + "/8192/v1/%E5%8E%82%E5%8C%BA%E5%85%A8%E6%99%AF.jpg",
+                "panorama": prefix + "/8192/v2/%E5%8E%82%E5%8C%BA%E5%85%A8%E6%99%AF.jpg",
                 "preview": prefix + "/cover/v1/%E5%8E%82%E5%8C%BA%E5%85%A8%E6%99%AF.jpg",
                 "autoLoad": true,
                 "showControls": true,
@@ -114,7 +114,7 @@ onMounted(() => {
             },
             "露天金属酒库": {
                 "type": "equirectangular",
-                "panorama": prefix + "/8192/v1/%E9%9C%B2%E5%A4%A9%E9%87%91%E5%B1%9E%E9%85%92%E5%BA%93.jpg",
+                "panorama": prefix + "/8192/v2/%E9%9C%B2%E5%A4%A9%E9%87%91%E5%B1%9E%E9%85%92%E5%BA%93.jpg",
                 "preview": prefix + "/cover/v1/%E9%9C%B2%E5%A4%A9%E9%87%91%E5%B1%9E%E9%85%92%E5%BA%93.jpg",
                 "autoLoad": true,
                 "showControls": true,
@@ -159,7 +159,7 @@ onMounted(() => {
             },
             "红粮车间和稻壳车间": {
                 "type": "equirectangular",
-                "panorama": prefix + "/8192/v1/%E7%BA%A2%E7%B2%AE%E8%BD%A6%E9%97%B4%E5%92%8C%E7%A8%BB%E5%A3%B3%E8%BD%A6%E9%97%B4.jpg",
+                "panorama": prefix + "/8192/v2/%E7%BA%A2%E7%B2%AE%E8%BD%A6%E9%97%B4%E5%92%8C%E7%A8%BB%E5%A3%B3%E8%BD%A6%E9%97%B4.jpg",
                 "preview": prefix + "/cover/v1/%E7%BA%A2%E7%B2%AE%E8%BD%A6%E9%97%B4%E5%92%8C%E7%A8%BB%E5%A3%B3%E8%BD%A6%E9%97%B4.jpg",
                 "autoLoad": true,
                 "showControls": true,

@@ -1,7 +1,7 @@
 <template>
     <div class="header-bar">
-        <v-card v-show="thumbUrl==prefix + '/thumb/v1/厂区全景.jpg'">
-            <v-card-text class="title scroll-text" >
+        <v-card v-show="thumbUrl == prefix + '/thumb/v1/厂区全景.jpg'">
+            <v-card-text class="title scroll-text">
                 凤香酒核心产区——陕西凤翔·柳林镇
             </v-card-text>
             <v-card-text class="title">
@@ -11,16 +11,8 @@
     </div>
     <v-overlay v-model="overlay" location-strategy="connected" scroll-strategy="block">
         <v-card class="pic">
-            <v-carousel :show-arrows="false" height="450px" style="z-index: 999;">
-                <v-carousel-item src="http://rxb4dwevt.hb-bkt.clouddn.com/%E6%9B%B2%E6%88%BF/%E6%9B%B2%E6%88%BF1.jpg"
-                    cover></v-carousel-item>
-                <v-carousel-item src="http://rxb4dwevt.hb-bkt.clouddn.com/%E6%9B%B2%E6%88%BF/%E6%9B%B2%E6%88%BF2.jpg"
-                    cover></v-carousel-item>
-                <v-carousel-item src="http://rxb4dwevt.hb-bkt.clouddn.com/%E6%9B%B2%E6%88%BF/%E6%9B%B2%E6%88%BF3.jpg"
-                    cover></v-carousel-item>
-                <v-carousel-item src="http://rxb4dwevt.hb-bkt.clouddn.com/%E6%9B%B2%E6%88%BF/%E6%9B%B2%E6%88%BF4.jpg"
-                    cover></v-carousel-item>
-                <v-carousel-item src="http://rxb4dwevt.hb-bkt.clouddn.com/%E6%9B%B2%E6%88%BF/%E6%9B%B2%E6%88%BF5.jpg"
+            <v-carousel :show-arrows="false" height="450px">
+                <v-carousel-item v-for="item in picUrls" :key="item" :src=item
                     cover></v-carousel-item>
             </v-carousel>
         </v-card>
@@ -31,10 +23,19 @@
 import { storeToRefs } from 'pinia'
 import prefix from './global';
 import { useCounterStore } from "../store/index"
+
+const picUrls = [
+    prefix + "/%E6%9B%B2%E6%88%BF/v1/%E6%9B%B2%E6%88%BF1.jpg",
+    prefix + "/%E6%9B%B2%E6%88%BF/v1/%E6%9B%B2%E6%88%BF2.jpg",
+    prefix + "/%E6%9B%B2%E6%88%BF/v1/%E6%9B%B2%E6%88%BF3.jpg",
+    prefix + "/%E6%9B%B2%E6%88%BF/v1/%E6%9B%B2%E6%88%BF4.jpg",
+    prefix + "/%E6%9B%B2%E6%88%BF/v1/%E6%9B%B2%E6%88%BF5.jpg",
+]
+
 // import { ref } from 'vue';
 
 const store = useCounterStore()
-const { overlay ,thumbUrl } = storeToRefs(store)
+const { overlay, thumbUrl } = storeToRefs(store)
 
 // const fontFamily = ref("AlimamaDaoLiTi-Regular")
 // function switchFront() {
@@ -79,7 +80,7 @@ const { overlay ,thumbUrl } = storeToRefs(store)
     background: none;
     width: 80vw;
     box-shadow: none;
-    
+
 }
 
 .pic {

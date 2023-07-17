@@ -27,7 +27,6 @@
                                 item.replace(/.*thumb\/v\d\/|.jpg/g,
                                     '') }}</div>
                         </div>
-
                     </div>
                 </v-slide-group-item>
             </v-slide-group>
