@@ -22,7 +22,7 @@
                         <v-icon class="over" icon="mdi-check-circle-outline" :style="{opacity: used.includes(item)? 1 :0}" />
                         <!-- <img :src="item" :class="{ active: thumbUrl === item }" @click="callSwitchScene(item)" /> -->
                         <div style="background-color: black; opacity: 0.8;">
-                            <div class="scroll-text" :class="{ scroll: thumbUrl === item }">{{ item.replace(/thumb\/|.jpg/g,
+                            <div class="scroll-text" :class="{ scroll: thumbUrl === item }">{{ item.replace(/.*thumb\/|.jpg/g,
                                 '') }}</div>
 
                         </div>
@@ -37,9 +37,9 @@
 
 <script setup>
 import { ref } from 'vue';
-import music from '/music/背景音乐.mp3'
 import { storeToRefs } from 'pinia'
 import { useCounterStore } from "../store/index"
+import prefix from './global';
 const store = useCounterStore()
 const { thumbUrl, navCurrTitle ,used }= storeToRefs(store)
 
@@ -60,8 +60,10 @@ let callSwitchScene = (item) => {
 }
 
 const isPlaying = ref(false)
-const audio = new Audio(music);
+const audio = new Audio(prefix + "/muisc/%E8%83%8C%E6%99%AF%E9%9F%B3%E4%B9%90.mp3");
 audio.loop= true
+audio.currentTime = 2
+audio.preload = "metadata"
 
 function playController() {
     isPlaying.value = !isPlaying.value

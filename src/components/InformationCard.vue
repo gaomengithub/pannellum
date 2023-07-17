@@ -1,10 +1,10 @@
 <template>
     <div class="header-bar">
-        <v-card v-show="thumbUrl=='thumb/厂区全景.jpg'">
+        <v-card v-show="thumbUrl==prefix + '/thumb/厂区全景.jpg'">
             <v-card-text class="title scroll-text" >
                 凤香酒核心产区——陕西凤翔·柳林镇
             </v-card-text>
-            <v-card-text class="title" v-bind:style="{ fontFamily: fontFamily }">
+            <v-card-text class="title">
                 柳林酒业集团
             </v-card-text>
         </v-card>
@@ -29,6 +29,7 @@
 
 <script setup >
 import { storeToRefs } from 'pinia'
+import prefix from './global';
 import { useCounterStore } from "../store/index"
 // import { ref } from 'vue';
 

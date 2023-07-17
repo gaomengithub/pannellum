@@ -1,0 +1,29 @@
+name: deploy-to-aliyun
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+
+    steps:
+      - uses: actions/checkout@v1
+      - name: login to Aliyun
+        env:
+          NAME: ${{secrets.ALI_REGISTRY_USERNAME}}
+          PASS: ${{secrets.ALI_REGISTRY_PASSWORD}}
+        run: docker login -u francissmajere@qq.com -p $PASS registry.cn-hongkong.aliyuncs.com
+      - run: docker build -t registry.cn-hongkong.aliyuncs.com/infiniteprimes/jiu-pan:0.0.1 .
+      - run: docker push registry.cn-hongkong.aliyuncs.com/infiniteprimes/jiu-pan:0.0.1
+      # - run: curl https://cs.console.aliyun.com/hook/trigger?token=eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjbHVzdGVySWQiOiJjOGU1MzFkYTgyNDZjNGVhN2E1Y2U1MGM2ODkzZmFmMGYiLCJpZCI6IjE0MDEzMiJ9.nmsDBUxl-ZfIjpYx9aXjh9mvwyiXehGqJaQLNC3w3JQgWXnZUctgE1S4lkJuWqd2Ebf3Pgl2Xd0cBqKlr9HiqOkTiuDjK30_tFfDo3Fz6TMv0gLjIFARSLP-jXfas3c6_OxKj4OefOO0J_O_ErEP1JmkiT9B6Svd9gaq8bzE7wQ
+
+      # - uses: act10ns/slack@v1
+      #   with:
+      #     status: ${{job.status}}
+      #     channel: '#fengheli'
+      #   if: always()

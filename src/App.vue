@@ -1,18 +1,21 @@
 <script setup>
 import Pannellum from './components/PannellumPage.vue';
-
+import InformationCard from './components/InformationCard.vue';
+import TipCard from './components/TipCard.vue';
 </script>
 
 <template>
   <main>
-
-    <Pannellum />
+    <TipCard />
+    <Pannellum >
+    </Pannellum>
+    <InformationCard />
   </main>
 </template>
 
 <style>
-@import './assets/front/AlimamaDaoLiTi-Regular.css';
 @import './assets/front/Alimama_DongFangDaKai_Regular.css';
+
 #app {
   width: 100vw;
   height: 100vh;
