@@ -15,20 +15,20 @@
             </v-slide-group>
         </v-sheet>
         <div class="img-nav">
-            <v-slide-group style="width: 100%;" show-arrows>
+            <v-slide-group style="width: 100%;" show-arrows :key="forceKey">
                 <v-slide-group-item v-for="(item, idx) in store.thumbUrls[navCurrTitle]" :key="idx">
                     <div class="cell" :style="{ backgroundImage: `url(${item})` }" @click="callSwitchScene(item)"
                         :class="{ active: thumbUrl === item }">
-                        <v-icon class="over" icon="mdi-check-circle-outline" :style="{opacity: used.includes(item)? 1 :0}" />
+                        <v-icon class="over" icon="mdi-check-circle-outline"
+                            :style="{ opacity: used.includes(item) ? 1 : 0 }" />
                         <!-- <img :src="item" :class="{ active: thumbUrl === item }" @click="callSwitchScene(item)" /> -->
                         <div style="background-color: black; opacity: 0.8;">
-                            <div class="scroll-text" :class="{ scroll: thumbUrl === item }">{{ item.replace(/.*thumb\/v\d\/|.jpg/g,
-                                '') }}</div>
-
+                            <div class="scroll-text" :class="{ scroll: thumbUrl === item }">{{
+                                item.replace(/.*thumb\/v\d\/|.jpg/g,
+                                    '') }}</div>
                         </div>
 
                     </div>
-
                 </v-slide-group-item>
             </v-slide-group>
         </div>
@@ -41,8 +41,11 @@ import { storeToRefs } from 'pinia'
 import { useCounterStore } from "../store/index"
 import prefix from './global';
 const store = useCounterStore()
-const { thumbUrl, navCurrTitle ,used }= storeToRefs(store)
-
+const { thumbUrl, navCurrTitle, used } = storeToRefs(store)
+const forceKey = ref(0)
+function forceRerender() {
+    forceKey.value += 1
+}
 const navTitle = ["鸟瞰航拍", "办公楼", "文化馆", "制曲室", "制酒车间", "自动化制酒车间", "酒海", "包装车间", "酒窖"]
 
 // const navCurrTitle = ref("鸟瞰航拍")
@@ -50,6 +53,7 @@ const navTitle = ["鸟瞰航拍", "办公楼", "文化馆", "制曲室", "制酒
 
 
 function titleNav(key) {
+    forceRerender()
     navCurrTitle.value = key;
 }
 
@@ -61,7 +65,7 @@ let callSwitchScene = (item) => {
 
 const isPlaying = ref(false)
 const audio = new Audio(prefix + "/muisc/%E8%83%8C%E6%99%AF%E9%9F%B3%E4%B9%90.mp3");
-audio.loop= true
+audio.loop = true
 audio.currentTime = 2
 audio.preload = "metadata"
 
@@ -122,7 +126,7 @@ function playController() {
     flex-direction: row;
     display: flex;
     align-items: center;
-    background-color: rgb(0,0,0,0.85);
+    background-color: rgb(0, 0, 0, 0.85);
     border-radius: 10px;
     /* opacity: 0.85; */
     height: 15vh;
@@ -140,7 +144,7 @@ function playController() {
     margin-left: 2vw;
     overflow: hidden;
     width: 10vh;
-    aspect-ratio: 1 / 1 ;
+    aspect-ratio: 1 / 1;
     /* height: 8vh; */
     background-size: contain;
     border-radius: 10px;
@@ -190,6 +194,4 @@ function playController() {
     border-color: #5085FB !important;
     z-index: 1;
 }
-
-
 </style>
