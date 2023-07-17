@@ -1294,7 +1294,7 @@ function findCategory(val) {
 
 function switchScene(item) {
     thumbUrl.value = item
-    const res = item.replace(/.*thumb\/v\d|.jpg/g, '')
+    const res = item.replace(/.*thumb\/v\d\/|.jpg/g, '')
     viewer.loadScene(res)
 }
 

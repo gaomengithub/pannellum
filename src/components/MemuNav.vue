@@ -22,7 +22,7 @@
                         <v-icon class="over" icon="mdi-check-circle-outline" :style="{opacity: used.includes(item)? 1 :0}" />
                         <!-- <img :src="item" :class="{ active: thumbUrl === item }" @click="callSwitchScene(item)" /> -->
                         <div style="background-color: black; opacity: 0.8;">
-                            <div class="scroll-text" :class="{ scroll: thumbUrl === item }">{{ item.replace(/.*thumb\/|.jpg/g,
+                            <div class="scroll-text" :class="{ scroll: thumbUrl === item }">{{ item.replace(/.*thumb\/v\d\/|.jpg/g,
                                 '') }}</div>
 
                         </div>
