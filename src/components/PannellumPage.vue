@@ -25,8 +25,8 @@ onMounted(() => {
         "scenes": {
             "厂区全景": {
                 "type": "equirectangular",
-                "panorama": prefix + "/8192/%E5%8E%82%E5%8C%BA%E5%85%A8%E6%99%AF.jpg",
-                "preview": prefix + "/cover/%E5%8E%82%E5%8C%BA%E5%85%A8%E6%99%AF.jpg",
+                "panorama": prefix + "/8192/v1/%E5%8E%82%E5%8C%BA%E5%85%A8%E6%99%AF.jpg",
+                "preview": prefix + "/cover/v1/%E5%8E%82%E5%8C%BA%E5%85%A8%E6%99%AF.jpg",
                 "autoLoad": true,
                 "showControls": true,
                 "hfov": 120,
@@ -114,8 +114,8 @@ onMounted(() => {
             },
             "露天金属酒库": {
                 "type": "equirectangular",
-                "panorama": prefix + "/8192/%E9%9C%B2%E5%A4%A9%E9%87%91%E5%B1%9E%E9%85%92%E5%BA%93.jpg",
-                "preview": prefix + "/cover/%E9%9C%B2%E5%A4%A9%E9%87%91%E5%B1%9E%E9%85%92%E5%BA%93.jpg",
+                "panorama": prefix + "/8192/v1/%E9%9C%B2%E5%A4%A9%E9%87%91%E5%B1%9E%E9%85%92%E5%BA%93.jpg",
+                "preview": prefix + "/cover/v1/%E9%9C%B2%E5%A4%A9%E9%87%91%E5%B1%9E%E9%85%92%E5%BA%93.jpg",
                 "autoLoad": true,
                 "showControls": true,
                 "haov": "360",
@@ -159,8 +159,8 @@ onMounted(() => {
             },
             "红粮车间和稻壳车间": {
                 "type": "equirectangular",
-                "panorama": prefix + "/8192/%E7%BA%A2%E7%B2%AE%E8%BD%A6%E9%97%B4%E5%92%8C%E7%A8%BB%E5%A3%B3%E8%BD%A6%E9%97%B4.jpg",
-                "preview": prefix + "/cover/%E7%BA%A2%E7%B2%AE%E8%BD%A6%E9%97%B4%E5%92%8C%E7%A8%BB%E5%A3%B3%E8%BD%A6%E9%97%B4.jpg",
+                "panorama": prefix + "/8192/v1/%E7%BA%A2%E7%B2%AE%E8%BD%A6%E9%97%B4%E5%92%8C%E7%A8%BB%E5%A3%B3%E8%BD%A6%E9%97%B4.jpg",
+                "preview": prefix + "/cover/v1/%E7%BA%A2%E7%B2%AE%E8%BD%A6%E9%97%B4%E5%92%8C%E7%A8%BB%E5%A3%B3%E8%BD%A6%E9%97%B4.jpg",
                 "autoLoad": true,
                 "showControls": true,
                 "haov": "360",
@@ -203,8 +203,8 @@ onMounted(() => {
             },
             "金属酒库": {
                 "type": "equirectangular",
-                "panorama": prefix + "/8192/%E9%87%91%E5%B1%9E%E9%85%92%E5%BA%93.jpg",
-                "preview": prefix + "/cover/%E9%87%91%E5%B1%9E%E9%85%92%E5%BA%93.jpg",
+                "panorama": prefix + "/8192/v1/%E9%87%91%E5%B1%9E%E9%85%92%E5%BA%93.jpg",
+                "preview": prefix + "/cover/v1/%E9%87%91%E5%B1%9E%E9%85%92%E5%BA%93.jpg",
                 "autoLoad": true,
                 "showControls": true,
                 "haov": "360",
@@ -247,8 +247,8 @@ onMounted(() => {
             },
             "制曲厂区1": {
                 "type": "equirectangular",
-                "panorama": prefix + "/8192/%E5%88%B6%E6%9B%B2%E5%8E%82%E5%8C%BA1.jpg",
-                "preview": prefix + "/cover/%E5%88%B6%E6%9B%B2%E5%8E%82%E5%8C%BA1.jpg",
+                "panorama": prefix + "/8192/v1/%E5%88%B6%E6%9B%B2%E5%8E%82%E5%8C%BA1.jpg",
+                "preview": prefix + "/cover/v1/%E5%88%B6%E6%9B%B2%E5%8E%82%E5%8C%BA1.jpg",
                 "autoLoad": true,
                 "showControls": true,
                 "haov": "360",
@@ -281,8 +281,8 @@ onMounted(() => {
             },
             "制曲厂区2": {
                 "type": "equirectangular",
-                "panorama": prefix + "/8192/%E5%88%B6%E6%9B%B2%E5%8E%82%E5%8C%BA2.jpg",
-                "preview": prefix + "/cover/%E5%88%B6%E6%9B%B2%E5%8E%82%E5%8C%BA2.jpg",
+                "panorama": prefix + "/8192/v1/%E5%88%B6%E6%9B%B2%E5%8E%82%E5%8C%BA2.jpg",
+                "preview": prefix + "/cover/v1/%E5%88%B6%E6%9B%B2%E5%8E%82%E5%8C%BA2.jpg",
                 "autoLoad": true,
                 "showControls": true,
                 "haov": "360",
@@ -315,8 +315,8 @@ onMounted(() => {
             },
             "厂区大门": {
                 "type": "equirectangular",
-                "panorama": prefix + "/8192/%E5%8E%82%E5%8C%BA%E5%A4%A7%E9%97%A8.jpg",
-                "preview": prefix + "/cover/%E5%8E%82%E5%8C%BA%E5%A4%A7%E9%97%A8.jpg",
+                "panorama": prefix + "/8192/v1/%E5%8E%82%E5%8C%BA%E5%A4%A7%E9%97%A8.jpg",
+                "preview": prefix + "/cover/v1/%E5%8E%82%E5%8C%BA%E5%A4%A7%E9%97%A8.jpg",
                 "autoLoad": true,
                 "showControls": true,
                 "haov": "360",
@@ -339,8 +339,8 @@ onMounted(() => {
             },
             "办公楼前": {
                 "type": "equirectangular",
-                "panorama": prefix + "/8192/%E5%8A%9E%E5%85%AC%E6%A5%BC%E5%89%8D.jpg",
-                "preview": prefix + "/cover/%E5%8A%9E%E5%85%AC%E6%A5%BC%E5%89%8D.jpg",
+                "panorama": prefix + "/8192/v1/%E5%8A%9E%E5%85%AC%E6%A5%BC%E5%89%8D.jpg",
+                "preview": prefix + "/cover/v1/%E5%8A%9E%E5%85%AC%E6%A5%BC%E5%89%8D.jpg",
                 "autoLoad": true,
                 "showControls": true,
                 "haov": "360",
@@ -363,8 +363,8 @@ onMounted(() => {
             },
             "办公楼大厅": {
                 "type": "equirectangular",
-                "panorama": prefix + "/8192/%E5%8A%9E%E5%85%AC%E6%A5%BC%E5%A4%A7%E5%8E%85.jpg",
-                "preview": prefix + "/cover/%E5%8A%9E%E5%85%AC%E6%A5%BC%E5%A4%A7%E5%8E%85.jpg",
+                "panorama": prefix + "/8192/v1/%E5%8A%9E%E5%85%AC%E6%A5%BC%E5%A4%A7%E5%8E%85.jpg",
+                "preview": prefix + "/cover/v1/%E5%8A%9E%E5%85%AC%E6%A5%BC%E5%A4%A7%E5%8E%85.jpg",
                 "autoLoad": true,
                 "showControls": true,
                 "haov": "360",
@@ -387,8 +387,8 @@ onMounted(() => {
             },
             "前言": {
                 "type": "equirectangular",
-                "panorama": prefix + "/8192/%E5%89%8D%E8%A8%80.jpg",
-                "preview": prefix + "/cover/%E5%89%8D%E8%A8%80.jpg",
+                "panorama": prefix + "/8192/v1/%E5%89%8D%E8%A8%80.jpg",
+                "preview": prefix + "/cover/v1/%E5%89%8D%E8%A8%80.jpg",
                 "autoLoad": true,
                 "showControls": true,
                 "haov": "360",
@@ -412,8 +412,8 @@ onMounted(() => {
             },
             "简介": {
                 "type": "equirectangular",
-                "panorama": prefix + "/8192/%E7%AE%80%E4%BB%8B.jpg",
-                "preview": prefix + "/cover/%E7%AE%80%E4%BB%8B.jpg",
+                "panorama": prefix + "/8192/v1/%E7%AE%80%E4%BB%8B.jpg",
+                "preview": prefix + "/cover/v1/%E7%AE%80%E4%BB%8B.jpg",
                 "autoLoad": true,
                 "showControls": true,
                 "haov": "360",
@@ -446,8 +446,8 @@ onMounted(() => {
             },
             "历史脉络": {
                 "type": "equirectangular",
-                "panorama": prefix + "/8192/%E5%8E%86%E5%8F%B2%E8%84%89%E7%BB%9C.jpg",
-                "preview": prefix + "/cover/%E5%8E%86%E5%8F%B2%E8%84%89%E7%BB%9C.jpg",
+                "panorama": prefix + "/8192/v1/%E5%8E%86%E5%8F%B2%E8%84%89%E7%BB%9C.jpg",
+                "preview": prefix + "/cover/v1/%E5%8E%86%E5%8F%B2%E8%84%89%E7%BB%9C.jpg",
                 "autoLoad": true,
                 "showControls": true,
                 "haov": "360",
@@ -480,8 +480,8 @@ onMounted(() => {
             },
             "19985工艺1": {
                 "type": "equirectangular",
-                "panorama": prefix + "/8192/19958%E5%B7%A5%E8%89%BA1.jpg",
-                "preview": prefix + "/cover/19958%E5%B7%A5%E8%89%BA1.jpg",
+                "panorama": prefix + "/8192/v1/19958%E5%B7%A5%E8%89%BA1.jpg",
+                "preview": prefix + "/cover/v1/19958%E5%B7%A5%E8%89%BA1.jpg",
                 "autoLoad": true,
                 "showControls": true,
                 "haov": "360",
@@ -504,8 +504,8 @@ onMounted(() => {
             },
             "19985工艺2": {
                 "type": "equirectangular",
-                "panorama": prefix + "/8192/19958%E5%B7%A5%E8%89%BA2.jpg",
-                "preview": prefix + "/cover/19958%E5%B7%A5%E8%89%BA2.jpg",
+                "panorama": prefix + "/8192/v1/19958%E5%B7%A5%E8%89%BA2.jpg",
+                "preview": prefix + "/cover/v1/19958%E5%B7%A5%E8%89%BA2.jpg",
                 "autoLoad": true,
                 "showControls": true,
                 "haov": "360",
@@ -528,8 +528,8 @@ onMounted(() => {
             },
             "19985工艺3": {
                 "type": "equirectangular",
-                "panorama": prefix + "/8192/19958%E5%B7%A5%E8%89%BA3.jpg",
-                "preview": prefix + "/cover/19958%E5%B7%A5%E8%89%BA3.jpg",
+                "panorama": prefix + "/8192/v1/19958%E5%B7%A5%E8%89%BA3.jpg",
+                "preview": prefix + "/cover/v1/19958%E5%B7%A5%E8%89%BA3.jpg",
                 "autoLoad": true,
                 "showControls": true,
                 "haov": "360",
@@ -540,8 +540,8 @@ onMounted(() => {
             },
             "古法酿造工具": {
                 "type": "equirectangular",
-                "panorama": prefix + "/8192/%E5%8F%A4%E6%B3%95%E9%85%BF%E9%80%A0%E5%B7%A5%E5%85%B7.jpg",
-                "preview": prefix + "/cover/%E5%8F%A4%E6%B3%95%E9%85%BF%E9%80%A0%E5%B7%A5%E5%85%B7.jpg",
+                "panorama": prefix + "/8192/v1/%E5%8F%A4%E6%B3%95%E9%85%BF%E9%80%A0%E5%B7%A5%E5%85%B7.jpg",
+                "preview": prefix + "/cover/v1/%E5%8F%A4%E6%B3%95%E9%85%BF%E9%80%A0%E5%B7%A5%E5%85%B7.jpg",
                 "autoLoad": true,
                 "showControls": true,
                 "haov": "360",
@@ -574,8 +574,8 @@ onMounted(() => {
             },
             "酒海": {
                 "type": "equirectangular",
-                "panorama": prefix + "/8192/%E9%85%92%E6%B5%B7.jpg",
-                "preview": prefix + "/cover/%E9%85%92%E6%B5%B7.jpg",
+                "panorama": prefix + "/8192/v1/%E9%85%92%E6%B5%B7.jpg",
+                "preview": prefix + "/cover/v1/%E9%85%92%E6%B5%B7.jpg",
                 "autoLoad": true,
                 "showControls": true,
                 "haov": "360",
@@ -598,8 +598,8 @@ onMounted(() => {
             },
             "书法区": {
                 "type": "equirectangular",
-                "panorama": prefix + "/8192/%E4%B9%A6%E6%B3%95%E5%8C%BA.jpg",
-                "preview": prefix + "/cover/%E4%B9%A6%E6%B3%95%E5%8C%BA.jpg",
+                "panorama": prefix + "/8192/v1/%E4%B9%A6%E6%B3%95%E5%8C%BA.jpg",
+                "preview": prefix + "/cover/v1/%E4%B9%A6%E6%B3%95%E5%8C%BA.jpg",
                 "autoLoad": true,
                 "showControls": true,
                 "haov": "360",
@@ -610,8 +610,8 @@ onMounted(() => {
             },
             "企业产品": {
                 "type": "equirectangular",
-                "panorama": prefix + "/8192/%E4%BC%81%E4%B8%9A%E4%BA%A7%E5%93%81.jpg",
-                "preview": prefix + "/cover/%E4%BC%81%E4%B8%9A%E4%BA%A7%E5%93%81.jpg",
+                "panorama": prefix + "/8192/v1/%E4%BC%81%E4%B8%9A%E4%BA%A7%E5%93%81.jpg",
+                "preview": prefix + "/cover/v1/%E4%BC%81%E4%B8%9A%E4%BA%A7%E5%93%81.jpg",
                 "autoLoad": true,
                 "showControls": true,
                 "haov": "360",
@@ -644,8 +644,8 @@ onMounted(() => {
             },
             "前景展望": {
                 "type": "equirectangular",
-                "panorama": prefix + "/8192/%E5%89%8D%E6%99%AF%E5%B1%95%E6%9C%9B.jpg",
-                "preview": prefix + "/cover/%E5%89%8D%E6%99%AF%E5%B1%95%E6%9C%9B.jpg",
+                "panorama": prefix + "/8192/v1/%E5%89%8D%E6%99%AF%E5%B1%95%E6%9C%9B.jpg",
+                "preview": prefix + "/cover/v1/%E5%89%8D%E6%99%AF%E5%B1%95%E6%9C%9B.jpg",
                 "autoLoad": true,
                 "showControls": true,
                 "haov": "360",
@@ -668,8 +668,8 @@ onMounted(() => {
             },
             "弧形投影": {
                 "type": "equirectangular",
-                "panorama": prefix + "/8192/%E5%BC%A7%E5%BD%A2%E6%8A%95%E5%BD%B1.jpg",
-                "preview": prefix + "/cover/%E5%BC%A7%E5%BD%A2%E6%8A%95%E5%BD%B1.jpg",
+                "panorama": prefix + "/8192/v1/%E5%BC%A7%E5%BD%A2%E6%8A%95%E5%BD%B1.jpg",
+                "preview": prefix + "/cover/v1/%E5%BC%A7%E5%BD%A2%E6%8A%95%E5%BD%B1.jpg",
                 "autoLoad": true,
                 "showControls": true,
                 "haov": "360",
@@ -692,8 +692,8 @@ onMounted(() => {
             },
             "党建": {
                 "type": "equirectangular",
-                "panorama": prefix + "/8192/%E5%85%9A%E5%BB%BA.jpg",
-                "preview": prefix + "/cover/%E5%85%9A%E5%BB%BA.jpg",
+                "panorama": prefix + "/8192/v1/%E5%85%9A%E5%BB%BA.jpg",
+                "preview": prefix + "/cover/v1/%E5%85%9A%E5%BB%BA.jpg",
                 "autoLoad": true,
                 "showControls": true,
                 "haov": "360",
@@ -716,8 +716,8 @@ onMounted(() => {
             },
             "培菌室": {
                 "type": "equirectangular",
-                "panorama": prefix + "/8192/%E5%9F%B9%E8%8F%8C%E5%AE%A4.jpg",
-                "preview": prefix + "/cover/%E5%9F%B9%E8%8F%8C%E5%AE%A4.jpg",
+                "panorama": prefix + "/8192/v1/%E5%9F%B9%E8%8F%8C%E5%AE%A4.jpg",
+                "preview": prefix + "/cover/v1/%E5%9F%B9%E8%8F%8C%E5%AE%A4.jpg",
                 "autoLoad": true,
                 "showControls": true,
                 "haov": "360",
@@ -747,8 +747,8 @@ onMounted(() => {
             },
             "制酒车间1": {
                 "type": "equirectangular",
-                "panorama": prefix + "/8192/%E5%88%B6%E9%85%92%E8%BD%A6%E9%97%B41.jpg",
-                "preview": prefix + "/cover/%E5%88%B6%E9%85%92%E8%BD%A6%E9%97%B41.jpg",
+                "panorama": prefix + "/8192/v1/%E5%88%B6%E9%85%92%E8%BD%A6%E9%97%B41.jpg",
+                "preview": prefix + "/cover/v1/%E5%88%B6%E9%85%92%E8%BD%A6%E9%97%B41.jpg",
                 "autoLoad": true,
                 "showControls": true,
                 "haov": "360",
@@ -771,8 +771,8 @@ onMounted(() => {
             },
             "制酒车间2": {
                 "type": "equirectangular",
-                "panorama": prefix + "/8192/%E5%88%B6%E9%85%92%E8%BD%A6%E9%97%B42.jpg",
-                "preview": prefix + "/cover/%E5%88%B6%E9%85%92%E8%BD%A6%E9%97%B42.jpg",
+                "panorama": prefix + "/8192/v1/%E5%88%B6%E9%85%92%E8%BD%A6%E9%97%B42.jpg",
+                "preview": prefix + "/cover/v1/%E5%88%B6%E9%85%92%E8%BD%A6%E9%97%B42.jpg",
                 "autoLoad": true,
                 "showControls": true,
                 "haov": "360",
@@ -815,8 +815,8 @@ onMounted(() => {
             },
             "制酒车间3": {
                 "type": "equirectangular",
-                "panorama": prefix + "/8192/%E5%88%B6%E9%85%92%E8%BD%A6%E9%97%B43.jpg",
-                "preview": prefix + "/cover/%E5%88%B6%E9%85%92%E8%BD%A6%E9%97%B43.jpg",
+                "panorama": prefix + "/8192/v1/%E5%88%B6%E9%85%92%E8%BD%A6%E9%97%B43.jpg",
+                "preview": prefix + "/cover/v1/%E5%88%B6%E9%85%92%E8%BD%A6%E9%97%B43.jpg",
                 "autoLoad": true,
                 "showControls": true,
                 "haov": "360",
@@ -849,8 +849,8 @@ onMounted(() => {
             },
             "制酒车间4": {
                 "type": "equirectangular",
-                "panorama": prefix + "/8192/%E5%88%B6%E9%85%92%E8%BD%A6%E9%97%B44.jpg",
-                "preview": prefix + "/cover/%E5%88%B6%E9%85%92%E8%BD%A6%E9%97%B44.jpg",
+                "panorama": prefix + "/8192/v1/%E5%88%B6%E9%85%92%E8%BD%A6%E9%97%B44.jpg",
+                "preview": prefix + "/cover/v1/%E5%88%B6%E9%85%92%E8%BD%A6%E9%97%B44.jpg",
                 "autoLoad": true,
                 "showControls": true,
                 "haov": "360",
@@ -883,8 +883,8 @@ onMounted(() => {
             },
             "自动化制酒车间1": {
                 "type": "equirectangular",
-                "panorama": prefix + "/8192/%E8%87%AA%E5%8A%A8%E5%8C%96%E5%88%B6%E9%85%92%E8%BD%A6%E9%97%B41.jpg",
-                "preview": prefix + "/cover/%E8%87%AA%E5%8A%A8%E5%8C%96%E5%88%B6%E9%85%92%E8%BD%A6%E9%97%B41.jpg",
+                "panorama": prefix + "/8192/v1/%E8%87%AA%E5%8A%A8%E5%8C%96%E5%88%B6%E9%85%92%E8%BD%A6%E9%97%B41.jpg",
+                "preview": prefix + "/cover/v1/%E8%87%AA%E5%8A%A8%E5%8C%96%E5%88%B6%E9%85%92%E8%BD%A6%E9%97%B41.jpg",
                 "autoLoad": true,
                 "showControls": true,
                 "haov": "360",
@@ -907,8 +907,8 @@ onMounted(() => {
             },
             "自动化制酒车间2": {
                 "type": "equirectangular",
-                "panorama": prefix + "/8192/%E8%87%AA%E5%8A%A8%E5%8C%96%E5%88%B6%E9%85%92%E8%BD%A6%E9%97%B42.jpg",
-                "preview": prefix + "/cover/%E8%87%AA%E5%8A%A8%E5%8C%96%E5%88%B6%E9%85%92%E8%BD%A6%E9%97%B42.jpg",
+                "panorama": prefix + "/8192/v1/%E8%87%AA%E5%8A%A8%E5%8C%96%E5%88%B6%E9%85%92%E8%BD%A6%E9%97%B42.jpg",
+                "preview": prefix + "/cover/v1/%E8%87%AA%E5%8A%A8%E5%8C%96%E5%88%B6%E9%85%92%E8%BD%A6%E9%97%B42.jpg",
                 "autoLoad": true,
                 "showControls": true,
                 "haov": "360",
@@ -931,8 +931,8 @@ onMounted(() => {
             },
             "自动化制酒车间3": {
                 "type": "equirectangular",
-                "panorama": prefix + "/8192/%E8%87%AA%E5%8A%A8%E5%8C%96%E5%88%B6%E9%85%92%E8%BD%A6%E9%97%B43.jpg",
-                "preview": prefix + "/cover/%E8%87%AA%E5%8A%A8%E5%8C%96%E5%88%B6%E9%85%92%E8%BD%A6%E9%97%B43.jpg",
+                "panorama": prefix + "/8192/v1/%E8%87%AA%E5%8A%A8%E5%8C%96%E5%88%B6%E9%85%92%E8%BD%A6%E9%97%B43.jpg",
+                "preview": prefix + "/cover/v1/%E8%87%AA%E5%8A%A8%E5%8C%96%E5%88%B6%E9%85%92%E8%BD%A6%E9%97%B43.jpg",
                 "autoLoad": true,
                 "showControls": true,
                 "haov": "360",
@@ -955,8 +955,8 @@ onMounted(() => {
             },
             "自动化制酒车间4": {
                 "type": "equirectangular",
-                "panorama": prefix + "/8192/%E8%87%AA%E5%8A%A8%E5%8C%96%E5%88%B6%E9%85%92%E8%BD%A6%E9%97%B46.jpg",
-                "preview": prefix + "/cover/%E8%87%AA%E5%8A%A8%E5%8C%96%E5%88%B6%E9%85%92%E8%BD%A6%E9%97%B46.jpg",
+                "panorama": prefix + "/8192/v1/%E8%87%AA%E5%8A%A8%E5%8C%96%E5%88%B6%E9%85%92%E8%BD%A6%E9%97%B46.jpg",
+                "preview": prefix + "/cover/v1/%E8%87%AA%E5%8A%A8%E5%8C%96%E5%88%B6%E9%85%92%E8%BD%A6%E9%97%B46.jpg",
                 "autoLoad": true,
                 "showControls": true,
                 "haov": "360",
@@ -979,8 +979,8 @@ onMounted(() => {
             },
             "自动化制酒车间5": {
                 "type": "equirectangular",
-                "panorama": prefix + "/8192/%E8%87%AA%E5%8A%A8%E5%8C%96%E5%88%B6%E9%85%92%E8%BD%A6%E9%97%B45.jpg",
-                "preview": prefix + "/cover/%E8%87%AA%E5%8A%A8%E5%8C%96%E5%88%B6%E9%85%92%E8%BD%A6%E9%97%B45.jpg",
+                "panorama": prefix + "/8192/v1/%E8%87%AA%E5%8A%A8%E5%8C%96%E5%88%B6%E9%85%92%E8%BD%A6%E9%97%B45.jpg",
+                "preview": prefix + "/cover/v1/%E8%87%AA%E5%8A%A8%E5%8C%96%E5%88%B6%E9%85%92%E8%BD%A6%E9%97%B45.jpg",
                 "autoLoad": true,
                 "showControls": true,
                 "haov": "360",
@@ -1003,8 +1003,8 @@ onMounted(() => {
             },
             "自动化制酒车间6": {
                 "type": "equirectangular",
-                "panorama": prefix + "/8192/%E8%87%AA%E5%8A%A8%E5%8C%96%E5%88%B6%E9%85%92%E8%BD%A6%E9%97%B44.jpg",
-                "preview": prefix + "/cover/%E8%87%AA%E5%8A%A8%E5%8C%96%E5%88%B6%E9%85%92%E8%BD%A6%E9%97%B44.jpg",
+                "panorama": prefix + "/8192/v1/%E8%87%AA%E5%8A%A8%E5%8C%96%E5%88%B6%E9%85%92%E8%BD%A6%E9%97%B44.jpg",
+                "preview": prefix + "/cover/v1/%E8%87%AA%E5%8A%A8%E5%8C%96%E5%88%B6%E9%85%92%E8%BD%A6%E9%97%B44.jpg",
                 "autoLoad": true,
                 "showControls": true,
                 "haov": "360",
@@ -1027,8 +1027,8 @@ onMounted(() => {
             },
             "自动化制酒车间7": {
                 "type": "equirectangular",
-                "panorama": prefix + "/8192/%E8%87%AA%E5%8A%A8%E5%8C%96%E5%88%B6%E9%85%92%E8%BD%A6%E9%97%B47.jpg",
-                "preview": prefix + "/cover/%E8%87%AA%E5%8A%A8%E5%8C%96%E5%88%B6%E9%85%92%E8%BD%A6%E9%97%B47.jpg",
+                "panorama": prefix + "/8192/v1/%E8%87%AA%E5%8A%A8%E5%8C%96%E5%88%B6%E9%85%92%E8%BD%A6%E9%97%B47.jpg",
+                "preview": prefix + "/cover/v1/%E8%87%AA%E5%8A%A8%E5%8C%96%E5%88%B6%E9%85%92%E8%BD%A6%E9%97%B47.jpg",
                 "autoLoad": true,
                 "showControls": true,
                 "haov": "360",
@@ -1051,8 +1051,8 @@ onMounted(() => {
             },
             "自动化制酒车间8": {
                 "type": "equirectangular",
-                "panorama": prefix + "/8192/%E8%87%AA%E5%8A%A8%E5%8C%96%E5%88%B6%E9%85%92%E8%BD%A6%E9%97%B48.jpg",
-                "preview": prefix + "/cover/%E8%87%AA%E5%8A%A8%E5%8C%96%E5%88%B6%E9%85%92%E8%BD%A6%E9%97%B48.jpg",
+                "panorama": prefix + "/8192/v1/%E8%87%AA%E5%8A%A8%E5%8C%96%E5%88%B6%E9%85%92%E8%BD%A6%E9%97%B48.jpg",
+                "preview": prefix + "/cover/v1/%E8%87%AA%E5%8A%A8%E5%8C%96%E5%88%B6%E9%85%92%E8%BD%A6%E9%97%B48.jpg",
                 "autoLoad": true,
                 "showControls": true,
                 "haov": "360",
@@ -1075,8 +1075,8 @@ onMounted(() => {
             },
             "酒海1": {
                 "type": "equirectangular",
-                "panorama": prefix + "/8192/%E9%85%92%E6%B5%B71.jpg",
-                "preview": prefix + "/cover/%E9%85%92%E6%B5%B71.jpg",
+                "panorama": prefix + "/8192/v1/%E9%85%92%E6%B5%B71.jpg",
+                "preview": prefix + "/cover/v1/%E9%85%92%E6%B5%B71.jpg",
                 "autoLoad": true,
                 "showControls": true,
                 "haov": "360",
@@ -1100,8 +1100,8 @@ onMounted(() => {
             },
             "酒海2": {
                 "type": "equirectangular",
-                "panorama": prefix + "/8192/%E9%85%92%E6%B5%B72.jpg",
-                "preview": prefix + "/cover/%E9%85%92%E6%B5%B72.jpg",
+                "panorama": prefix + "/8192/v1/%E9%85%92%E6%B5%B72.jpg",
+                "preview": prefix + "/cover/v1/%E9%85%92%E6%B5%B72.jpg",
                 "autoLoad": true,
                 "showControls": true,
                 "haov": "360",
@@ -1125,8 +1125,8 @@ onMounted(() => {
             },
             "酒海3": {
                 "type": "equirectangular",
-                "panorama": prefix + "/8192/%E9%85%92%E6%B5%B73.jpg",
-                "preview": prefix + "/cover/%E9%85%92%E6%B5%B73.jpg",
+                "panorama": prefix + "/8192/v1/%E9%85%92%E6%B5%B73.jpg",
+                "preview": prefix + "/cover/v1/%E9%85%92%E6%B5%B73.jpg",
                 "autoLoad": true,
                 "showControls": true,
                 "haov": "360",
@@ -1149,8 +1149,8 @@ onMounted(() => {
             },
             "酒海4": {
                 "type": "equirectangular",
-                "panorama": prefix + "/8192/%E9%85%92%E6%B5%B74.jpg",
-                "preview": prefix + "/cover/%E9%85%92%E6%B5%B74.jpg",
+                "panorama": prefix + "/8192/v1/%E9%85%92%E6%B5%B74.jpg",
+                "preview": prefix + "/cover/v1/%E9%85%92%E6%B5%B74.jpg",
                 "autoLoad": true,
                 "showControls": true,
                 "haov": "360",
@@ -1173,8 +1173,8 @@ onMounted(() => {
             },
             "酒海5": {
                 "type": "equirectangular",
-                "panorama": prefix + "/8192/%E9%85%92%E6%B5%B75.jpg",
-                "preview": prefix + "/cover/%E9%85%92%E6%B5%B75.jpg",
+                "panorama": prefix + "/8192/v1/%E9%85%92%E6%B5%B75.jpg",
+                "preview": prefix + "/cover/v1/%E9%85%92%E6%B5%B75.jpg",
                 "autoLoad": true,
                 "showControls": true,
                 "haov": "360",
@@ -1197,8 +1197,8 @@ onMounted(() => {
             },
             "包装车间": {
                 "type": "equirectangular",
-                "panorama": prefix + "/8192/%E5%8C%85%E8%A3%85%E8%BD%A6%E9%97%B4.jpg",
-                "preview": prefix + "/cover/%E5%8C%85%E8%A3%85%E8%BD%A6%E9%97%B4.jpg",
+                "panorama": prefix + "/8192/v1/%E5%8C%85%E8%A3%85%E8%BD%A6%E9%97%B4.jpg",
+                "preview": prefix + "/cover/v1/%E5%8C%85%E8%A3%85%E8%BD%A6%E9%97%B4.jpg",
                 "autoLoad": true,
                 "showControls": true,
                 "haov": "360",
@@ -1221,8 +1221,8 @@ onMounted(() => {
             },
             "仓库": {
                 "type": "equirectangular",
-                "panorama": prefix + "/8192/%E4%BB%93%E5%BA%93.jpg",
-                "preview": prefix + "/cover/%E4%BB%93%E5%BA%93.jpg",
+                "panorama": prefix + "/8192/v1/%E4%BB%93%E5%BA%93.jpg",
+                "preview": prefix + "/cover/v1/%E4%BB%93%E5%BA%93.jpg",
                 "autoLoad": true,
                 "showControls": true,
                 "haov": "360",
@@ -1245,8 +1245,8 @@ onMounted(() => {
             },
             "酒窖": {
                 "type": "equirectangular",
-                "panorama": prefix + "/8192/%E9%85%92%E7%AA%96.jpg",
-                "preview": prefix + "/cover/%E9%85%92%E7%AA%96.jpg",
+                "panorama": prefix + "/8192/v1/%E9%85%92%E7%AA%96.jpg",
+                "preview": prefix + "/cover/v1/%E9%85%92%E7%AA%96.jpg",
                 "autoLoad": true,
                 "showControls": true,
                 "haov": "360",
@@ -1271,8 +1271,8 @@ onMounted(() => {
         }
     })
     viewer.on("scenechange", function () {
-        navCurrTitle.value = findCategory(prefix +"/thumb/" + viewer.getScene() + ".jpg")
-        thumbUrl.value = prefix +"/thumb/" + viewer.getScene() + ".jpg"
+        navCurrTitle.value = findCategory(prefix +"/thumb/v1/" + viewer.getScene() + ".jpg")
+        thumbUrl.value = prefix +"/thumb/v1/" + viewer.getScene() + ".jpg"
         used.value.push(thumbUrl.value)
 
     })
@@ -1294,7 +1294,7 @@ function findCategory(val) {
 
 function switchScene(item) {
     thumbUrl.value = item
-    const res = item.replace(/.*thumb\/|.jpg/g, '')
+    const res = item.replace(/.*thumb\/v\d|.jpg/g, '')
     viewer.loadScene(res)
 }
 

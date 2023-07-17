@@ -1,3 +1,3 @@
-const prefix = "http://rxb4dwevt.hb-bkt.clouddn.com/"
+const prefix = "https://fenghuanian-store.jiu-data.com"
 
 export default prefix
