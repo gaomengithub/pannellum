@@ -1259,7 +1259,7 @@ onMounted(() => {
                         "pitch": 2,
                         "yaw":0,
                         "type": "info",
-                        "text": "凤香酒馆",
+                        "text": "凤享酒馆",
                         "URL":"https://www.baidu.com/"
                         // "sceneId": "酒窖",
                         // "cssClass": "scenePoint",
