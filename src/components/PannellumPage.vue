@@ -11,7 +11,7 @@ import { useCounterStore } from "../store/index"
 import prefix from './global'
 // import * as pannellum from 'pannellum';
 const store = useCounterStore()
-const { overlay, thumbUrl, navCurrTitle ,used } = storeToRefs(store)
+const { overlay, thumbUrl, navCurrTitle ,used ,endPointOverlay } = storeToRefs(store)
 
 let viewer
 onMounted(() => {
@@ -29,7 +29,7 @@ onMounted(() => {
                 "preview": prefix + "/cover/v1/%E5%8E%82%E5%8C%BA%E5%85%A8%E6%99%AF.jpg",
                 "autoLoad": true,
                 "showControls": true,
-                "hfov": 120,
+                "hfov": 100,
                 "minHfov": 20,
                 "yaw": -107,
                 "pitch": -27,
@@ -1258,13 +1258,13 @@ onMounted(() => {
                     {
                         "pitch": 2,
                         "yaw":0,
-                        "type": "info",
+                        // "type": "info",
                         "text": "凤享酒馆",
-                        "URL":"https://www.fenghuanian.com/"
+                        // "URL":"https://www.fenghuanian.com/"
                         // "sceneId": "酒窖",
-                        // "cssClass": "scenePoint",
-                        // "createTooltipFunc": scenespot,
-                        // "createTooltipArgs": "酒窖",
+                        "cssClass": "custom-hotspot",
+                        "createTooltipFunc": hotspot,
+                        "createTooltipArgs": endPointOverlay,
                     },
                 ]
             }
@@ -1327,6 +1327,18 @@ defineExpose({ switchScene })
     height: 100vh;
 }
 
+.custom-tooltip-end-pic{
+    height: 40px;
+    width: 40px;
+    background-image: url("../assets/icons/information-slab-circle-outline.svg");
+
+    /* 防止图标重复 */
+    background-size: contain;
+    /* 让图标在盒子里面适当的缩放 */
+    filter: invert(1);
+    /* Applies the invert filter */
+
+}
 .custom-hotspot {
     height: 40px;
     width: 40px;
@@ -1343,8 +1355,8 @@ defineExpose({ switchScene })
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
     background-image: url(../assets/icons/point.gif);
     background-size: cover;
 }

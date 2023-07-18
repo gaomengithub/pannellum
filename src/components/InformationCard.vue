@@ -17,6 +17,11 @@
             </v-carousel>
         </v-card>
     </v-overlay>
+    <v-overlay v-model="endPointOverlay" location-strategy="connected" scroll-strategy="block">
+        <v-card class="pic">
+            <v-img :src="endPointPicUrl" height="85vh"></v-img>
+        </v-card>
+    </v-overlay>
 </template>
 
 <script setup >
@@ -32,10 +37,11 @@ const picUrls = [
     prefix + "/%E6%9B%B2%E6%88%BF/v1/%E6%9B%B2%E6%88%BF5.jpg",
 ]
 
+const endPointPicUrl = prefix + "/%E6%8E%A8%E5%B9%BF%E5%A4%A7%E4%BD%BF.jpg"
 // import { ref } from 'vue';
 
 const store = useCounterStore()
-const { overlay, thumbUrl } = storeToRefs(store)
+const { overlay, thumbUrl ,endPointOverlay } = storeToRefs(store)
 
 // const fontFamily = ref("AlimamaDaoLiTi-Regular")
 // function switchFront() {

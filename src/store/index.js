@@ -3,6 +3,7 @@ import { ref } from 'vue'
 import prefix from '../components/global'
 export const useCounterStore = defineStore('main', () => {
     const overlay = ref(false)
+    const endPointOverlay = ref(false)
     const thumbUrl = ref(prefix + "/thumb/v1/厂区全景.jpg")
     const navCurrTitle = ref("鸟瞰航拍")
     const thumbUrls = {
@@ -69,5 +70,5 @@ export const useCounterStore = defineStore('main', () => {
         ]
     }
     const used = ref([prefix + "/thumb/v1/厂区全景.jpg"])
-    return { overlay, thumbUrl, navCurrTitle ,thumbUrls ,used}
+    return { overlay, thumbUrl, navCurrTitle ,thumbUrls ,used ,endPointOverlay}
 })
