@@ -17,7 +17,7 @@
         <div class="img-nav">
             <v-slide-group style="width: 100%;" show-arrows :key="forceKey">
                 <v-slide-group-item v-for="(item, idx) in store.thumbUrlsForFind[navCurrTitle]" :key="idx">
-                    <div class="cell" :style="{ backgroundImage: `url(${store.thumbUrls[navCurrTitle][item]})` }" @click="callSwitchScene(item)"
+                    <div class="cell" :style="{ backgroundImage: `url(${store.thumbUrls[navCurrTitle][idx]})` }" @click="callSwitchScene(item)"
                         :class="{ active: thumbUrl === item }">
                         <v-icon class="over" icon="mdi-check-circle-outline"
                             :style="{ opacity: used.includes(item) ? 1 : 0 }" />
