@@ -598,7 +598,7 @@ onMounted(() => {
             },
             "书法区": {
                 "type": "equirectangular",
-                "panorama": prefix + "/8192/v1/%E4%B9%A6%E6%B3%95%E5%8C%BA.jpg",
+                "panorama": prefix + "/8192/v2/%E4%B9%A6%E6%B3%95%E5%8C%BA.jpg",
                 "preview": prefix + "/cover/v1/%E4%B9%A6%E6%B3%95%E5%8C%BA.jpg",
                 "autoLoad": true,
                 "showControls": true,
