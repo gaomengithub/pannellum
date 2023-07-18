@@ -18,7 +18,7 @@
         </v-card>
     </v-overlay>
     <v-overlay v-model="endPointOverlay" location-strategy="connected" scroll-strategy="block">
-        <v-card class="pic">
+        <v-card class="pic-end">
             <v-img :src="endPointPicUrl" height="85vh"></v-img>
         </v-card>
     </v-overlay>
@@ -96,7 +96,12 @@ const { overlay, thumbUrl ,endPointOverlay } = storeToRefs(store)
     width: 80vw;
 }
 
-
+.pic-end {
+    position: relative;
+    top: 5vh;
+    background: none;
+    width: 300px;
+}
 .title {
     font-size: 2em !important;
     text-align: center;
