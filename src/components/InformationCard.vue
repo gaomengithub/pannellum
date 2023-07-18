@@ -37,7 +37,7 @@ const picUrls = [
     prefix + "/%E6%9B%B2%E6%88%BF/v1/%E6%9B%B2%E6%88%BF5.jpg",
 ]
 
-const endPointPicUrl = prefix + "/%E6%8E%A8%E5%B9%BF%E5%A4%A7%E4%BD%BF.jpg"
+const endPointPicUrl = prefix + "/%E6%8E%A8%E5%B9%BF%E5%A4%A7%E4%BD%BF/v1/%E6%8E%A8%E5%B9%BF%E5%A4%A7%E4%BD%BF.jpg"
 // import { ref } from 'vue';
 
 const store = useCounterStore()
