@@ -29,7 +29,7 @@ export const useCounterStore = defineStore('main', () => {
             prefix + "/thumb/v1/古法酿造工具.jpg",
             prefix + "/thumb/v1/酒海.jpg",
             prefix + "/thumb/v1/前景展望.jpg",
-            prefix + "/thumb/v1/书法区.jpg",
+            prefix + "/thumb/v2/书法区.jpg",
             prefix + "/thumb/v1/企业产品.jpg",
             prefix + "/thumb/v1/弧形投影.jpg",
             prefix + "/thumb/v1/党建.jpg",
