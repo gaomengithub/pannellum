@@ -16,16 +16,15 @@
         </v-sheet>
         <div class="img-nav">
             <v-slide-group style="width: 100%;" show-arrows :key="forceKey">
-                <v-slide-group-item v-for="(item, idx) in store.thumbUrls[navCurrTitle]" :key="idx">
-                    <div class="cell" :style="{ backgroundImage: `url(${item})` }" @click="callSwitchScene(item)"
+                <v-slide-group-item v-for="(item, idx) in store.thumbUrlsForFind[navCurrTitle]" :key="idx">
+                    <div class="cell" :style="{ backgroundImage: `url(${store.thumbUrls[navCurrTitle][item]})` }" @click="callSwitchScene(item)"
                         :class="{ active: thumbUrl === item }">
                         <v-icon class="over" icon="mdi-check-circle-outline"
                             :style="{ opacity: used.includes(item) ? 1 : 0 }" />
                         <!-- <img :src="item" :class="{ active: thumbUrl === item }" @click="callSwitchScene(item)" /> -->
                         <div style="background-color: black; opacity: 0.8;">
                             <div class="scroll-text" :class="{ scroll: thumbUrl === item }">{{
-                                item.replace(/.*thumb\/v\d\/|.jpg/g,
-                                    '') }}</div>
+                                item }}</div>
                         </div>
                     </div>
                 </v-slide-group-item>
@@ -58,6 +57,7 @@ function titleNav(key) {
 
 const emits = defineEmits(['eventFromChild'])
 let callSwitchScene = (item) => {
+    // const res = item.replace(/.*thumb\/v\d\/|.jpg/g, '')
     used.value.push(item)
     emits('eventFromChild', item);
 }

@@ -1271,18 +1271,19 @@ onMounted(() => {
         }
     })
     viewer.on("scenechange", function () {
-        navCurrTitle.value = findCategory(prefix +"/thumb/v1/" + viewer.getScene() + ".jpg")
-        thumbUrl.value = prefix +"/thumb/v1/" + viewer.getScene() + ".jpg"
+        const sceneName = viewer.getScene()
+        const categoryName = findCategory(sceneName)
+        navCurrTitle.value = categoryName
+        thumbUrl.value = sceneName
         used.value.push(thumbUrl.value)
-
     })
 })
 
 function findCategory(val) {
     // 遍历thumbUrls的键
-    for (let category of Object.keys(store.thumbUrls)) {
+    for (let category of Object.keys(store.thumbUrlsForFind)) {
         // 在当前分类的图片中查找是否有匹配的URL
-        if (store.thumbUrls[category].find((value) => value === val)) {
+        if (store.thumbUrlsForFind[category].find((value) => value === val)) {
             // 如果找到了匹配的URL，返回当前的分类
             return category;
         }
@@ -1293,9 +1294,8 @@ function findCategory(val) {
 
 
 function switchScene(item) {
-    thumbUrl.value = item
-    const res = item.replace(/.*thumb\/v\d\/|.jpg/g, '')
-    viewer.loadScene(res)
+    // thumbUrl.value = res
+    viewer.loadScene(item)
 }
 
 
