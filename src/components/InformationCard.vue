@@ -2,7 +2,7 @@
     <div class="header-bar">
         <v-card v-show="thumbUrl == '厂区全景'">
             <v-card-text class="title scroll-text">
-                凤香酒核心产区——陕西凤翔·柳林镇
+                凤香型白酒核心产区——陕西凤翔·柳林镇
             </v-card-text>
             <v-card-text class="title">
                 柳林酒业集团
