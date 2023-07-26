@@ -1,8 +1,4 @@
 <template>
-    <div class="right-nav">
-        <v-btn variant="text" :icon="isPlaying ? 'mdi-music' : 'mdi-music-off'" color="grey-lighten-5" density="compact"
-            size="auto" @click="playController"></v-btn>
-    </div>
     <div class="bar">
         <v-sheet class="mx-auto">
             <v-slide-group show-arrows next-icon="mdi-arrow-right-circle" prev-icon="mdi-arrow-left-circle">
@@ -37,7 +33,6 @@
 import { ref } from 'vue';
 import { storeToRefs } from 'pinia'
 import { useCounterStore } from "../store/index"
-import prefix from './global';
 const store = useCounterStore()
 const { thumbUrl, navCurrTitle, used } = storeToRefs(store)
 const forceKey = ref(0)
@@ -62,20 +57,8 @@ let callSwitchScene = (item) => {
     emits('eventFromChild', item);
 }
 
-const isPlaying = ref(false)
-const audio = new Audio(prefix + "/muisc/%E8%83%8C%E6%99%AF%E9%9F%B3%E4%B9%90.mp3");
-audio.loop = true
-audio.currentTime = 2
-audio.preload = "metadata"
 
-function playController() {
-    isPlaying.value = !isPlaying.value
-    if (isPlaying.value) {
-        audio.play()
-    } else {
-        audio.pause()
-    }
-}
+
 
 
 
@@ -94,13 +77,7 @@ function playController() {
     overflow: hidden;
 }
 
-.right-nav {
-    display: flex;
-    flex-direction: column;
-    position: fixed;
-    top: 2vw;
-    right: 2vw;
-}
+
 
 
 

@@ -1,6 +1,6 @@
 <template>
     <div class="header-bar">
-        <v-card v-show="thumbUrl == prefix + '/thumb/v1/厂区全景.jpg'">
+        <v-card v-show="thumbUrl == '厂区全景.jpg'">
             <v-card-text class="title scroll-text">
                 凤香酒核心产区——陕西凤翔·柳林镇
             </v-card-text>
